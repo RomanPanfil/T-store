@@ -790,6 +790,7 @@ img {
   border-radius: 8px;
   height: 42px;
   min-width: 70px;
+  background-color: #fff;
 }
 .ui-select__pagination .jq-selectbox__select {
   height: 100%;
@@ -936,10 +937,12 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #F0F2F3;
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  background-color: #FFFFFF;
+  border: 1px solid #E1E3E5;
+  line-height: 1;
 }
 .pagination-item-link.active {
   background-color: #70B12F;
@@ -961,7 +964,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #F0F2F3;
+  background-color: #fff;
+  border: 1px solid #E1E3E5;
   -webkit-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -2310,12 +2314,12 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-right: 80px;
+  margin-right: 62px;
   height: 80px;
 }
 @media (max-width: 1366px) {
   .header-nav {
-    margin-right: 50px;
+    margin-right: 48px;
   }
 }
 @media (max-width: 1280px) {
@@ -2816,6 +2820,9 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #FFFFFF), to(#DFF2FF));
+  background: -o-linear-gradient(top, #FFFFFF 10%, #DFF2FF 100%);
+  background: linear-gradient(180deg, #FFFFFF 10%, #DFF2FF 100%);
 }
 
 .page-wrapper {
@@ -3440,7 +3447,7 @@ img {
   height: 100%;
 }
 .about-description {
-  background-color: #F5F6F7;
+  background-color: #FFF;
   padding-top: 80px;
   padding-bottom: 80px;
 }

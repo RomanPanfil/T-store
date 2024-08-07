@@ -368,6 +368,8 @@ img {
 		border-radius: 8px;
 		height: 42px;
 		min-width: 70px;	
+		background-color: #fff;
+		
 
 		.jq-selectbox {		
 			&__select {
@@ -502,9 +504,13 @@ img {
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
-			justify-content: center;
-			background-color: $pagination;
-			transition: background-color 0.3s;
+			justify-content: center;		
+			transition: background-color 0.3s;						
+			background-color: #FFFFFF;			
+			border: 1px solid #E1E3E5;
+			line-height: 1;
+		
+			
 
 			&.active {
 				background-color: $primary;
@@ -523,7 +529,8 @@ img {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background-color: $pagination;
+			background-color: #fff;
+			border: 1px solid #E1E3E5;
 			transition: background-color 0.3s;
 
 			&:not(.disabled):hover {
