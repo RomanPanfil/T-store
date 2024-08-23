@@ -1,8 +1,26 @@
 .about {
 
     &-card {
-        padding-top: 80px;
+        padding-top: 62px;
         padding-bottom: 50px;
+
+        @media (max-width: 768px) {
+            padding-bottom: 40px;
+
+            &:last-of-type {
+                padding-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 599px) {
+            padding-top: 0;
+        }
+
+        &-top {
+            @media (max-width: 768px) {
+                order: -1;
+            }
+        }
 
         &-description {
             display: flex;
@@ -10,10 +28,21 @@
             justify-content: center;
             height: 100%;
             max-width: 536px;
-            margin-bottom: 30px;           
+            margin-bottom: 30px;
+            
+            
+            @media (max-width: 768px) {               
+                max-width: unset;
+                height: unset;
+                margin-bottom: 0;
+            }
     
             &__right {
                 margin-left: auto;
+
+                @media (max-width: 768px) {
+                    margin-left: 0;                  
+                }
             }            
         }
 
@@ -21,6 +50,20 @@
             font-weight: 600;
             @include fz(32);
             margin-bottom: 24px;
+
+            &.mobile {
+                display: none;
+
+                @media (max-width: 768px) {
+                    display: inline-block;
+                }
+            }
+
+            &.desktop {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
         }
 
         &-text {
@@ -30,12 +73,17 @@
         &-image {
             aspect-ratio: 1.6;
             margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 24px;
+            }
     
             img {
                 border-radius: 10px;
                 object-fit: cover;
                 width: 100%;
                 height: 100%;
+                display: block;
             }
         }
     }
@@ -45,6 +93,10 @@
         background-color: #FFF;
         padding-top: 80px;
         padding-bottom: 80px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 40px;
+        }
 
         &-content {
             text-align: center;
@@ -75,4 +127,8 @@
     margin-right: auto;
     padding-top: 80px;
     padding-bottom: 80px;
+
+    @media (max-width: 768px) {
+        padding-top: 40px;
+    }
 }

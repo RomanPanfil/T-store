@@ -1,0 +1,27 @@
+.feedback {
+
+    &-info {
+        margin-bottom: 40px;
+    }
+
+    &-text {
+        line-height: 1.5;
+        color: #484949;
+        opacity: 0.5;
+        margin-bottom: 40px;
+        max-width: 560px;
+    }
+
+    &-form {
+        margin-bottom: 20px;
+
+        .ui-btn {
+            margin-top: 40px;
+
+            @media(max-width: 599px) {
+                margin-top: 24px;
+                width: 100%;
+            }
+        }
+    }
+}
