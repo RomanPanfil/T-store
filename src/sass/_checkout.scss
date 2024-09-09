@@ -80,18 +80,31 @@
       @media (max-width: 370px) {
         font-size: 1.5rem;
       }
+      @media (max-width: 420px) {
+        line-height: 1.31;
+      }
     }
 
     &-header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
       margin-bottom: 22px;
       -webkit-box-pack: justify;
-      align-items: center;
-      -webkit-align-items: center;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: baseline;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+      }
     }
   }
 
@@ -101,6 +114,10 @@
       font-size: 2rem;
       font-weight: 600;
       color: #484949;
+
+      span {
+        white-space: nowrap;
+      }
 
       @media (max-width: 370px) {
         font-size: 1.5rem;
@@ -113,10 +130,20 @@
       display: flex;
       margin-bottom: 22px;
       -webkit-box-pack: justify;
-      align-items: center;
-      -webkit-align-items: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: baseline;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+      }
     }
 
     &-edit {
