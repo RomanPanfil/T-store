@@ -119,6 +119,10 @@
         white-space: nowrap;
       }
 
+      @media (max-width: 420px) {
+        line-height: 1.31;
+      }
+
       @media (max-width: 370px) {
         font-size: 1.5rem;
       }
