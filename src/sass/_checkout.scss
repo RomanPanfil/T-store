@@ -1,9 +1,173 @@
 .checkout {
-    &-form {
-        padding: 30px 30px 10px 30px;
-        border: 1px solid $border;
-        background-color: #fff;
-        border-radius: 10px;
-        margin-bottom: 24px;
+  &-form {
+    padding: 30px 30px 10px 30px;
+    border: 1px solid $border;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 24px;
+
+    @media (max-width: 599px) {
+      padding: 16px 16px 4px;
     }
+  }
+
+  .error {
+    min-height: auto;
+    padding: unset;
+  }
+
+  .ui-filed-name {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .subtotal {
+    position: relative;
+
+    &-head {
+      @media (max-width: 395px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 101px;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #f5f6f7;
+
+      @media (max-width: 395px) {
+        top: 23%;
+      }
+
+      @media (max-width: 599px) {
+        top: 24%;
+      }
+    }
+  }
+
+  .payment-method {
+    background-color: #fff;
+    border: 1px solid #e1e3e5;
+    border-radius: 10px;
+    padding: 30px 30px 0;
+    margin-bottom: 24px;
+
+    @media (max-width: 599px) {
+      padding: 16px 16px 0px;
+    }
+
+    &-edit .icon {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #484949;
+      stroke-width: 1.5px;
+    }
+
+    &-title {
+      font-size: 32px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #484949;
+
+      @media (max-width: 370px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 22px;
+      -webkit-box-pack: justify;
+      align-items: center;
+      -webkit-align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+  }
+
+  .shopping-cart {
+    &-name {
+      font-size: 32px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #484949;
+
+      @media (max-width: 370px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 22px;
+      -webkit-box-pack: justify;
+      align-items: center;
+      -webkit-align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    &-edit {
+      @media (max-width: 395px) {
+        display: none;
+      }
+    }
+
+    &-edit .icon {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #484949;
+      stroke-width: 1.5px;
+    }
+  }
+
+  .payment {
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      -webkit-align-items: center;
+
+      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 24px;
+      color: #484949;
+      cursor: pointer;
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      &-input {
+        width: 20px;
+        height: 20px;
+        accent-color: #484949;
+        cursor: pointer;
+      }
+
+      &-pic {
+        width: 16px;
+        height: 20px;
+      }
+    }
+
+    &-items {
+      margin-bottom: 30px;
+    }
+  }
 }
