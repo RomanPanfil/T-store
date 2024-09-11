@@ -29,8 +29,7 @@ body {
   font-weight: $weight;
   @include fz($fontsize);
   line-height: $lh;
-  background: #FFF; 
-  
+  background: #fff;
 }
 
 input::-ms-clear {
@@ -65,3 +64,5 @@ input[type="search"]::-webkit-search-cancel-button {
 @import "shopping-cart";
 
 @import "checkout";
+
+@import "account-info";

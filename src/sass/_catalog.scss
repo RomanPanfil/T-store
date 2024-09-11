@@ -1,244 +1,243 @@
 .catalog {
-    &-filter {
-        margin-bottom: 12px;
+  &-filter {
+    margin-bottom: 12px;
 
-        &-search {
-            @media(max-width: 1023px) {
-                margin-bottom: 24px;
-            }
-        }
-
-        &-selects {
-            display: flex;
-            justify-content: space-between;         
-            margin-left: -12px;
-            margin-right: -12px;
-
-            @media(max-width: 1366px) {
-                margin-left: -10px;
-                margin-right: -10px;
-            }
-
-            .jq-selectbox__select {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-        }
-
-        &-select {            
-            .jq-selectbox {
-                width: 100%;
-            }
-
-            &.least {
-                width: 70%;
-                flex: 0 0 70%;
-                padding-left: 12px;
-                padding-right: 12px;
-
-                @media(max-width: 1366px) {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                @media(max-width: 1023px) {
-                    width: calc(100% - 68px);
-                    flex: 0 0 calc(100% - 68px);
-                    margin-bottom: 24px;
-                }
-            }
-
-            &.count {
-                width: 30%;
-                flex: 0 0 30%;
-                padding-left: 12px;
-                padding-right: 12px;
-
-                @media(max-width: 1023px) {
-                    display: none;
-                }
-            }
-
-            &.more {
-                display: none;
-                width: 68px;
-                flex: 0 0 68px;
-                padding-left: 12px;
-                padding-right: 12px;
-
-                @media(max-width: 1366px) {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-
-                @media(max-width: 1023px) {
-                    display: block;
-                    margin-bottom: 24px;
-                }
-            }
-        }
-
-        &-more {
-            position: relative;
-            border: 1px solid $border;
-            border-radius: 6px;
-            background-color: transparent;           
-            cursor: pointer;   
-            width: 100%;
-            height: 100%;        
-
-            &-icon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 20px;
-                height: 20px;
-                fill: none;
-            }
-        }
+    &-search {
+      @media (max-width: 1023px) {
+        margin-bottom: 24px;
+      }
     }
+
+    &-selects {
+      display: flex;
+      justify-content: space-between;
+      margin-left: -12px;
+      margin-right: -12px;
+
+      @media (max-width: 1366px) {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+
+      .jq-selectbox__select {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    &-select {
+      .jq-selectbox {
+        width: 100%;
+      }
+
+      &.least {
+        width: 70%;
+        flex: 0 0 70%;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @media (max-width: 1366px) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        @media (max-width: 1023px) {
+          width: calc(100% - 68px);
+          flex: 0 0 calc(100% - 68px);
+          margin-bottom: 24px;
+        }
+      }
+
+      &.count {
+        width: 30%;
+        flex: 0 0 30%;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @media (max-width: 1023px) {
+          display: none;
+        }
+      }
+
+      &.more {
+        display: none;
+        width: 68px;
+        flex: 0 0 68px;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        @media (max-width: 1366px) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        @media (max-width: 1023px) {
+          display: block;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    &-more {
+      position: relative;
+      border: 1px solid $border;
+      border-radius: 6px;
+      background-color: transparent;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        fill: none;
+      }
+    }
+  }
 }
 
 .filters {
-    background-color: #fff;
-    padding: 18px 20px; 
-    border: 1px solid $border;
-    border-radius: 10px;
+  background-color: #fff;
+  padding: 18px 20px;
+  border: 1px solid $border;
+  border-radius: 10px;
 
-    @media(max-width: 1023px) {
-        display: none;
+  @media (max-width: 1023px) {
+    display: none;
 
-        &.show {
-            display: block;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #fff;
-            z-index: 99;
-            overflow-y: auto;
-        }
+    &.show {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      z-index: 99;
+      overflow-y: auto;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    width: 6px;
+    height: 6px;
+    background-color: $border;
+    border: 3px solid $border;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten($border, 8%);
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-close {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 1023px) {
+      display: inline-block;
+    }
+  }
+
+  &-item {
+    border-bottom: 1px solid $border;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      border-bottom: none;
     }
 
-    ::-webkit-scrollbar {
-		width: 6px;
-		height: 6px;		
-	}
-	::-webkit-scrollbar-thumb {
-		width: 6px;
-		height: 6px;
-		background-color: $border;
-        border: 3px solid $border;
-        border-radius: 6px;
-        
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: lighten($border, 8%);
-	}
-    
-    &-title {       
-        font-weight: 600;
-        font-size: 16px;   
-        padding-bottom: 16px;
-        margin-bottom: 16px;
-        border-bottom: 1px solid $border;   
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    &-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      // margin-bottom: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
 
-    &-close {
-        width: 24px;
-        height: 24px;
+      &-icon {
+        width: 22px;
+        height: 22px;
         fill: none;
-        display: none;
-        cursor: pointer;
+        stroke: $font;
+        stroke-width: 1.5px;
+        transition: transform 0.3s;
+      }
 
-        @media(max-width: 1023px) {
-            display: inline-block;
+      &.show {
+        .filters-item-trigger-icon {
+          transform: rotate(180deg);
         }
+      }
     }
 
-    &-item {
-        border-bottom: 1px solid $border;
-        padding-bottom: 16px;
-        margin-bottom: 16px;
+    &-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease-out;
 
-        &:last-of-type {
-            border-bottom: none;
-        }
-
-        &-trigger {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;          
-            font-weight: 600;
-            font-size: 16px;
-            // margin-bottom: 16px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-
-            &-icon {
-                width: 22px;
-                height: 22px;           
-                fill: none;
-                stroke: $font;
-                stroke-width: 1.5px;
-                transition: transform 0.3s;
-            }
-
-            &.show {
-                .filters-item-trigger-icon {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-
-        &-body {
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.3s ease-out;
-
-            &.show {
-                max-height: 1000px;
-            }
-        }
-
-        &-search {
-            margin-bottom: 16px;
-        }
-
-        &-positions {
-            max-height: 210px;
-            overflow-y: auto;
-            // padding-top: 6px;
-            padding-top: 22px;
-            padding-bottom: 6px;  
-        }
-
-        &-position {
-            font-weight: 400;
-            font-size: 16px;
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 10px;
-            cursor: pointer;
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-
-            span {
-                color: rgba(72, 73, 73, 0.5);
-                margin-left: 4px;
-            }
-        }
+      &.show {
+        max-height: 1000px;
+      }
     }
 
-    .ui-btn + .ui-btn {
-        margin-top: 16px;
+    &-search {
+      margin-bottom: 16px;
     }
+
+    &-positions {
+      max-height: 210px;
+      overflow-y: auto;
+      // padding-top: 6px;
+      padding-top: 22px;
+      padding-bottom: 6px;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 16px;
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      span {
+        color: rgba(72, 73, 73, 0.5);
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .ui-btn + .ui-btn {
+    margin-top: 16px;
+  }
 }
