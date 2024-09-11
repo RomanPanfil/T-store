@@ -16,13 +16,8 @@
     padding: unset;
   }
 
-  .ui-filed-name {
-    @include fz(16);
-    font-weight: 600;
-    line-height: 24px;
+  .ui-field-name {
     margin-bottom: 10px;
-    display: block;
-    color: $title;
   }
 
   .subtotal {

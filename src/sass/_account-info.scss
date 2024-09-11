@@ -1,13 +1,4 @@
 .account {
-  .ui-filed-name {
-    @include fz(16);
-    font-weight: 600;
-    line-height: 24px;
-    margin-bottom: 6px;
-    display: block;
-    color: $title;
-  }
-
   &-nav {
     li {
       padding: 13px 0;
@@ -29,5 +20,13 @@
         color: $primary;
       }
     }
+  }
+}
+
+.form-auth-edit {
+  margin-bottom: 60px;
+
+  .ui-btn {
+    margin-top: 8px;
   }
 }

@@ -187,21 +187,22 @@ img {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  border: 1px solid #e1e3e5;
 
   .ui-select {
     transition: background-color 0.3s, height 0.3s;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      width: 1px;
-      height: 80%;
-      background-color: $border;
-      transform: translateY(-50%);
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   right: 0;
+    //   width: 1px;
+    //   height: 80%;
+    //   background-color: $border;
+    //   transform: translateY(-50%);
+    // }
 
     .jq-selectbox {
       &__dropdown {
@@ -251,9 +252,10 @@ img {
     outline: none;
     flex-grow: 1;
     width: 50px;
-    padding-left: 20px;
+    // padding-left: 20px;
     padding-right: 20px;
     transition: background-color 0.3s;
+    border-radius: 8px;
 
     &:hover,
     &:focus {
@@ -340,6 +342,14 @@ img {
     }
   }
 
+  &__greyer {
+    background-color: #484949;
+
+    &:hover {
+      background-color: $btn_green_hover;
+    }
+  }
+
   &__grey {
     color: $font;
 
@@ -392,6 +402,15 @@ img {
   @media (max-width: 599px) {
     margin-bottom: 12px;
   }
+
+  &-name {
+    @include fz(16);
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 6px;
+    display: block;
+    color: $title;
+  }
 }
 
 .ui-label {
@@ -415,6 +434,13 @@ img {
   &:focus {
     background-color: $bg_light;
     box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
+  }
+
+  &::placeholder {
+    @include fz(16);
+    font-weight: $weight;
+    line-height: 24px;
+    color: #a3a4a4;
   }
 
   &__mid {
@@ -624,11 +650,14 @@ img {
 
   &__trigger {
     &-arrow {
-      background-image: url(../images/svg/arrow-down.svg);
+      background-image: url(../images/svg/arrow-down_grey.svg);
       background-repeat: no-repeat;
-      background-position: center right;
-      width: 16px;
-      height: 16px;
+      // background-position: center right;
+      background-position: center;
+      // width: 16px;
+      // height: 16px;
+      width: 20px;
+      height: 20px;
       transition: transform 0.3s;
     }
   }

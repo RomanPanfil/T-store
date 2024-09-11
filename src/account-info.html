@@ -11,12 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
     <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    > -->
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  > -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -99,6 +99,7 @@
                             <a href="#"> Home decor </a>
                           </li>
                         </ul>
+
                         <ul>
                           <li>
                             <a href="#"> Animals </a>
@@ -337,7 +338,7 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="ui-field">
-                          <label class="ui-filed-name" for="emailAdress"
+                          <label class="ui-field-name" for="emailAdress"
                             >Email Address</label
                           >
                           <input
@@ -348,20 +349,88 @@
                             placeholder="Ivanov@gmail.com"
                           />
                         </div>
-                        
                       </div>
                       <div class="col-lg-6">
                         <div class="ui-field">
-                          <label class="ui-filed-name" for="emailAdress"
+                          <label class="ui-field-name" for="emailAdress"
                             >Enter Password</label
                           >
                           <input
-                            type="password" class="ui-input" id="password" name="password" minlength="8"  
+                            type="password"
+                            class="ui-input"
+                            id="password"
+                            name="password"
+                            minlength="8"
                           />
                         </div>
                       </div>
-                      </div>
+                    </div>
+                    <button class="ui-btn ui-btn__greyer" type="submit">
+                      Update Details
+                    </button>
+                  </form>
 
+                  <form class="form-update">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-field-name" for="firstName"
+                            >First Name</label
+                          >
+                          <input
+                            type="text"
+                            class="ui-input"
+                            name="first-name"
+                            id="first-name"
+                            placeholder="Ivan"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-field-name" for="lastName"
+                            >Last Name</label
+                          >
+                          <input
+                            type="text"
+                            class="ui-input"
+                            name="last-name"
+                            id="last-name"
+                            placeholder="Ivanov"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-field-name" for="lastName"
+                            >Phone Number</label
+                          >
+                          <div class="ui-search-group">
+                            <select class="ui-select" name="" id="">
+                              <option selected value="BY">BY</option>
+                              <option value="RU">RU</option>
+                            </select>
+                            <input
+                              type="tel"
+                              class="ui-search-group-input"
+                              name="last-name"
+                              id="last-name"
+                              placeholder="+375 (29) 000-00-00"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-field-name" for="lastName"
+                            >Country</label
+                          >
+                          <select class="ui-select" name="" id="">
+                            <option value="BY">BY</option>
+                            <option value="RU">RU</option>
+                          </select>
+                        </div>
+                      </div> -->
                     </div>
                   </form>
                 </div>
@@ -542,11 +611,11 @@
     ></script>
     <script src="https://unpkg.com/imask"></script>
     <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
+  src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+  integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
