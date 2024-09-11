@@ -22,6 +22,7 @@
     line-height: 24px;
     margin-bottom: 10px;
     display: block;
+    color: $title;
   }
 
   .subtotal {
@@ -131,14 +132,14 @@
       @media (max-width: 395px) {
         display: none;
       }
-    }
 
-    &-edit .icon {
-      width: 22px;
-      height: 22px;
-      fill: none;
-      stroke: #484949;
-      stroke-width: 1.5px;
+      .icon {
+        width: 22px;
+        height: 22px;
+        fill: none;
+        stroke: #484949;
+        stroke-width: 1.5px;
+      }
     }
   }
 
@@ -148,7 +149,7 @@
       align-items: center;
       gap: 10px;
       @include fz(16);
-      font-weight: $weight;
+      font-weight: 600;
       line-height: 24px;
       color: $title;
       cursor: pointer;

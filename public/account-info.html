@@ -310,28 +310,62 @@
               <li>My Account</li>
             </ul>
             <h1 class="page-title">My Account</h1>
-            <div class="row">
-              <div class="col-md-3">
-                <aside class="account-sidebar">
-                  <nav class="account-nav">
-                    <ul>
-                      <li class="active">
-                        <a href="#">Account Information</a>
-                      </li>
-                      <li><a href="#">Account Security</a></li>
-                      <li><a href="#">Email Settings</a></li>
-                      <li><a href="#">Purchases</a></li>
-                      <li><a href="#">Reviews</a></li>
-                      <li><a href="#">Payment Method</a></li>
-                      <li><a href="#">Favorites</a></li>
-                      <li><a href="#">Support</a></li>
-                      <li><a href="#">Membership</a></li>
-                      <li><a href="#">Log out</a></li>
-                    </ul>
-                  </nav>
-                </aside>
+            <div class="account">
+              <div class="row">
+                <div class="col-md-3">
+                  <aside class="account-sidebar">
+                    <nav class="account-nav">
+                      <ul>
+                        <li class="active">
+                          <a href="#">Account Information</a>
+                        </li>
+                        <li><a href="#">Account Security</a></li>
+                        <li><a href="#">Email Settings</a></li>
+                        <li><a href="#">Purchases</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Payment Method</a></li>
+                        <li><a href="#">Favorites</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Log out</a></li>
+                      </ul>
+                    </nav>
+                  </aside>
+                </div>
+                <div class="col-md-9">
+                  <form class="form-auth-edit">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-filed-name" for="emailAdress"
+                            >Email Address</label
+                          >
+                          <input
+                            type="email"
+                            class="ui-input"
+                            name="email-adress"
+                            id="email-adress"
+                            placeholder="Ivanov@gmail.com"
+                          />
+                        </div>
+                        
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="ui-field">
+                          <label class="ui-filed-name" for="emailAdress"
+                            >Enter Password</label
+                          >
+                          <input
+                            type="password" class="ui-input" id="password" name="password" minlength="8"  
+                          />
+                        </div>
+                      </div>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
               </div>
-              <div class="col-md-9"></div>
             </div>
 
             <script>
