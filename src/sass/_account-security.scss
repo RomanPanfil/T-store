@@ -1,0 +1,52 @@
+.form-password-upd {
+  .ui {
+    &-btn {
+      margin-bottom: 60px;
+      @media (max-width: 599px) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    &-field {
+      margin-bottom: 32px;
+      @media (max-width: 599px) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.account-security {
+  @include fz(16);
+  line-height: 24px;
+
+  &-title {
+    font-weight: 600;
+    color: $font;
+    margin-bottom: 18px;
+    @media (max-width: 599px) {
+      margin-bottom: 6px;
+    }
+  }
+  &-explain {
+    font-weight: $weight;
+    color: $light-grey;
+    @media (max-width: 599px) {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 12px 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .ui-btn {
+    margin-top: 46px;
+    @media (max-width: 599px) {
+      width: 100%;
+      margin-top: 13px;
+    }
+  }
+}

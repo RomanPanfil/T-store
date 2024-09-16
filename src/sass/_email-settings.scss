@@ -1,0 +1,42 @@
+.email-upd {
+  .ui-btn {
+    margin-top: 24px;
+    @media (max-width: 599px) {
+      width: 100%;
+    }
+  }
+  &-title {
+    @include fz(24);
+    font-weight: 600;
+    line-height: 32px;
+    color: $title;
+    margin-bottom: 24px;
+  }
+  &-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    @include fz(16);
+    color: $title;
+    font-weight: $weight;
+    line-height: 24px;
+    margin: 0px 0px 24px;
+    .ui-checkbox {
+      margin-right: 8px;
+    }
+    @media (max-width: 599px) {
+      align-items: flex-start;
+    }
+  }
+
+  &-additional {
+    @include fz(16);
+    color: $title;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 40px;
+    @media (max-width: 599px) {
+      margin-top: 24px;
+    }
+  }
+}

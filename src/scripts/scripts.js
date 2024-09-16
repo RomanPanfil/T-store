@@ -381,5 +381,46 @@ document.addEventListener("DOMContentLoaded", () => {
         $(selectAllCheckbox).trigger("refresh");
       }
     }
+
+    const starFormArr = document.querySelectorAll('[data-controller="stars"]');
+    starFormArr.forEach((f) => {
+      const labels = f.querySelectorAll("label");
+      const inChecked = f.querySelector("input:checked");
+
+      if (inChecked) {
+        for (let i = 1; i <= inChecked.value; i++) {
+          labels[i - 1].classList.add("active");
+        }
+      }
+
+      labels.forEach((label) => {
+        label.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const input = label.querySelector("input");
+          input.checked = true;
+
+          for (let i = 1; i <= 5; i++) {
+            if (i <= input.value) labels[i - 1].classList.add("active");
+            else labels[i - 1].classList.remove("active");
+          }
+        });
+
+        label.addEventListener("mouseover", function (e) {
+          const current = label.querySelector("input").value;
+          for (let i = 1; i <= current; i++) {
+            labels[i - 1].classList.add("active");
+          }
+        });
+
+        label.addEventListener("mouseout", function (e) {
+          const inputChecked = f.querySelector("input:checked");
+          const checked = inputChecked ? inputChecked.value : 0;
+          const current = label.querySelector("input").value;
+          for (let i = 1; i <= current; i++) {
+            if (i > checked) labels[i - 1].classList.remove("active");
+          }
+        });
+      });
+    });
   })();
 });

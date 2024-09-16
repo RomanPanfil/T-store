@@ -1,0 +1,141 @@
+<!--#include file="inc-header.html"-->
+<main class="main">
+  <div class="container">
+    <div class="page-wrapper">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>My Account</li>
+      </ul>
+      <h1 class="page-title">My Account</h1>
+      <div class="account">
+        <div class="row">
+          <div class="col-md-3">
+            <aside class="account-sidebar">
+              <nav class="account-nav">
+                <ul>
+                  <li>
+                    <a href="#">Account Information</a>
+                  </li>
+                  <li class="active"><a href="#">Account Security</a></li>
+                  <li><a href="#">Email Settings</a></li>
+                  <li><a href="#">Purchases</a></li>
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Payment Method</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Membership</a></li>
+                  <li><a href="#">Log out</a></li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+          <div class="col-md-9">
+            <form class="form-password-upd">
+              <div class="ui-field">
+                <label class="ui-field-name" for="currentPsw"
+                  >Current Password</label
+                >
+                <input
+                  type="password"
+                  class="ui-input"
+                  id="currentPsw"
+                  name="cur-password"
+                  minlength="8"
+                  placeholder="Current password"
+                />
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="newPwd"
+                      >New Password</label
+                    >
+                    <input
+                      type="password"
+                      class="ui-input"
+                      id="newPwd"
+                      name="new-password"
+                      minlength="8"
+                      placeholder="New password"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="confirmPwd"
+                      >Confirm New Password</label
+                    >
+                    <input
+                      type="password"
+                      class="ui-input"
+                      id="confirmPwd"
+                      name="confirm-password"
+                      minlength="8"
+                      placeholder="Confirm New password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="ui-btn ui-btn__dark" type="submit">
+                Update Password
+              </button>
+            </form>
+            <script>
+              document.addEventListener("DOMContentLoaded", (event) => {
+                $(document).ready(function () {
+                  $(".form-password-upd").on("submit", function (e) {
+                    if (!$(".form-password-upd").valid()) e.preventDefault();
+                  });
+                  $(".form-password-upd").validate({
+                    errorElement: "span",
+                    errorClass: "invalid",
+
+                    rules: {
+                      "cur-password": {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 16,
+                      },
+                      "new-password": {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 16,
+                      },
+                      "confirm-password": {
+                        required: true,
+                        minlength: 8,
+                        maxlength: 16,
+                        equalTo: "#newPwd",
+                      },
+                    },
+                    errorPlacement: function (error, element) {
+                      if (element.hasClass("ui-select")) {
+                        element.closest(".ui-field").append(error);
+                      }
+                      if (element.hasClass("ui-input")) {
+                        element.closest(".ui-field").append(error);
+                      }
+                    },
+                  });
+                });
+              });
+            </script>
+            <div class="account-security">
+              <div class="account-security-title">Account Security</div>
+              <div class="account-security-explain">
+                <p>
+                  We recommend to enable 2 Factor Authentication using Google
+                  Authenticator to increase the security of your account.
+                </p>
+              </div>
+              <button class="ui-btn ui-btn__dark">Enable Google 2FA</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!--#include file="inc-footer.html"-->

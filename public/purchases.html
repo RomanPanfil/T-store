@@ -1,0 +1,807 @@
+<!--#include file="inc-header.html"-->
+<main class="main">
+  <div class="container">
+    <div class="page-wrapper">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>My Account</li>
+      </ul>
+      <h1 class="page-title">My Account</h1>
+      <div class="account">
+        <div class="row">
+          <div class="col-md-3">
+            <aside class="account-sidebar">
+              <nav class="account-nav">
+                <ul>
+                  <li>
+                    <a href="#">Account Information</a>
+                  </li>
+                  <li><a href="#">Account Security</a></li>
+                  <li><a href="#">Email Settings</a></li>
+                  <li class="active"><a href="#">Purchases</a></li>
+                  <li><a href="#">Reviews</a></li>
+                  <li><a href="#">Payment Method</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Membership</a></li>
+                  <li><a href="#">Log out</a></li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+          <div class="col-md-9">
+            <div class="purchase-filter">
+              <div class="row">
+                <div class="col-lg-4">
+                  <form class="purchase-filter-search">
+                    <label class="search-label search-label__left-btn">
+                      <button type="submit" class="search-btn">
+                        <svg class="search-icon">
+                          <use xlink:href="svg/svg/symbols.svg#search"></use>
+                        </svg>
+                      </button>
+                      <input
+                        type="search"
+                        placeholder="Search your downloads"
+                        class="ui-input ui-input__mid ui-input__search"
+                      />
+                    </label>
+                  </form>
+                </div>
+                <div class="col-lg-4 col-6">
+                  <div class="purchase-filter-select">
+                    <select class="ui-select ui-select__filter">
+                      <option value="1">All categories</option>
+                      <option value="2">Special</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                  <div class="purchase-filter-select">
+                    <select class="ui-select ui-select__filter">
+                      <option value="1">Downloaded by License</option>
+                      <option value="2">POD invoice</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-1.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-price">$5.99</div>
+                    <div class="products-card-reciept">
+                      <div class="products-card-reciept-txt">
+                        Payment receipt
+                      </div>
+                      <a href="#" class="products-card-reciept-dwl">
+                        <svg class="products-card-reciept-icon">
+                          <use xlink:href="svg/svg/symbols.svg#download"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-1-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-1-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-2-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-2-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-3-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-3-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-4-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          checked
+                          id="star-4-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-5-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-5-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">Standart License</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-2.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-alt-payment">
+                      <div class="links-item links-item__white">License</div>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-6-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-6-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-6-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-6-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-6-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-6-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-6-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-6-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-6-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-6-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">Premium License</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-3.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-alt-payment">
+                      <div class="links-item links-item__white">License</div>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-7-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-7-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-7-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-7-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-7-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-7-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-7-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-7-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-7-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-7-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">Premium License</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-4.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-alt-payment">
+                      <div class="links-item links-item__white">
+                        POD invoice
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-8-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-8-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-8-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-8-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-8-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-8-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-8-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-8-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-8-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-8-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">POD License Included</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-5.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-alt-payment">
+                      <div class="links-item links-item__white">
+                        POD invoice
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-9-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-9-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-9-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-9-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-9-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-9-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-9-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-9-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-9-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-9-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">POD License Included</div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-6">
+                <div class="products-card" data-href="#">
+                  <div class="products-card-image">
+                    <img
+                      src="./images/examples/product-6.jpg"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="products-card-header">
+                    <div class="products-card-alt-payment">
+                      <div class="links-item links-item__white">
+                        POD invoice
+                      </div>
+                    </div>
+                  </div>
+                  <div class="products-card-big-title">
+                    3D Angel Laser Cut Files | Glowforge | Layered
+                  </div>
+                  <div class="products-card-rating">
+                    <form
+                      class="products-card-rating-group"
+                      data-controller="stars"
+                    >
+                      <label class="products-card-rating-lb" for="star-10-1">
+                        <input
+                          name="stars"
+                          value="1"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-10-1"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-10-2">
+                        <input
+                          name="stars"
+                          value="2"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-10-2"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-10-3">
+                        <input
+                          name="stars"
+                          value="3"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-10-3"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-10-4">
+                        <input
+                          name="stars"
+                          value="4"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-10-4"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                      <label class="products-card-rating-lb" for="star-10-5">
+                        <input
+                          name="stars"
+                          value="5"
+                          type="radio"
+                          class="products-card-rating-choice"
+                          disabled
+                          id="star-10-5"
+                        />
+                        <svg class="products-card-rating-icon">
+                          <use
+                            xlink:href="svg/svg/symbols.svg#star-rating"
+                          ></use>
+                        </svg>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="products-card-date">
+                    Downloaded at 21 Feb 2024
+                  </div>
+                  <div class="products-card-date">
+                    Added to account on 21 Feb 2024
+                  </div>
+                  <div class="ui-btn ui-btn__green">Download Again</div>
+                  <div class="products-card-license">POD License Included</div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <ul class="pagination-list">
+                <li class="pagination-item">
+                  <span
+                    href="#"
+                    class="pagination-item-nav pagination-item-nav__prev disabled"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="svg/svg/symbols.svg#arrow-right" />
+                    </svg>
+                  </span>
+                </li>
+                <li class="pagination-item">
+                  <span class="pagination-item-link active" href="#">1</span>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-item-link" href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a class="pagination-item-link" href="#">3</a>
+                </li>
+                <li class="pagination-item">
+                  <span class="pagination-item-dots"> ... </span>
+                </li>
+                <li class="pagination-item pagination-item__last">
+                  <a class="pagination-item-link" href="#">15</a>
+                </li>
+                <li class="pagination-item">
+                  <a
+                    href="#"
+                    class="pagination-item-nav pagination-item-nav__next"
+                  >
+                    <svg class="icon">
+                      <use xlink:href="svg/svg/symbols.svg#arrow-right" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+              <div class="pagination-count">
+                <label for="paginationCount">Page</label>
+                <select
+                  name="pagination-count"
+                  id="paginationCount"
+                  class="ui-select ui-select__pagination"
+                >
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <span class="pagination-count-last">of 10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!--#include file="inc-footer.html"-->

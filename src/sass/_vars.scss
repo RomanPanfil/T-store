@@ -1,40 +1,35 @@
 // Colors & BG's ---
-$bgc: #F4FAFE;
+$bgc: #f4fafe;
 $bg_light: #f5f6f7;
 
-
-
-$error: #B10000;
+$error: #b10000;
 
 $font: #383838;
 $font-light: rgba(56, 56, 56, 0.5);
 $title: #484949;
-$primary: #70B12F;
-$secondary: #F79E1B;
-
-
+$primary: #70b12f;
+$secondary: #f79e1b;
+$light-grey: #a3a4a4;
 
 // Buttons
-$btn_green: #70B12F;
+$btn_green: #70b12f;
 $btn_green_hover: #619829;
-$btn_orange: #F79E1B;
-$btn_orange_hover: #E68900;
+$btn_orange: #f79e1b;
+$btn_orange_hover: #e68900;
 
 // $border: #f0f2f3;
 $border: #e1e3e5;
 $border_light: rgba(56, 56, 56, 0.05);
 
 // pagination
-$pagination: #F0F2F3;
+$pagination: #f0f2f3;
 $pagination_hover: #e1e3e5;
 
-
-$input_border: #BBDBCC;
+$input_border: #bbdbcc;
 $input_hover: darken($input_border, 15%);
 
 $jq_border: #a3a3a3;
-$jq_hover: darken($jq_border,15%);
-
+$jq_hover: darken($jq_border, 15%);
 
 // Layouts
 $base: 1320;
@@ -44,16 +39,21 @@ $block_margin: 0 0 25px;
 
 $inner: $base + $gutter * 2 + px;
 
-
 // Grid
-$breakpoints: ("xl":1440,"lg":1260,"md":1024, "sm":769,"xs":599,"us":320);
-
+$breakpoints: (
+  "xl": 1440,
+  "lg": 1260,
+  "md": 1024,
+  "sm": 769,
+  "xs": 599,
+  "us": 320,
+);
 
 // Typography ---
 $fontsize: 16;
 $base-font-size: 16;
 $weight: 400;
-$basefont: 'Inter';
+$basefont: "Inter";
 
 $lh: 1.42;
 $th: 1.42;
@@ -76,15 +76,12 @@ $h6: 18;
 $block_heading_font_size: 24;
 $block_heading_font_weight: 600;
 
-
-
-
 @mixin fz($f_size) {
-	font-size: $f_size + px;
-	font-size: $f_size/16 + rem;
+  font-size: $f_size + px;
+  font-size: $f_size/16 + rem;
 }
 
-@mixin ls($lsp) {	
-	letter-spacing: $lsp + px;
-	letter-spacing: $lsp/16 + rem;
+@mixin ls($lsp) {
+  letter-spacing: $lsp + px;
+  letter-spacing: $lsp/16 + rem;
 }

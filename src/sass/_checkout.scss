@@ -1,4 +1,25 @@
 .checkout {
+  &-edit {
+    &-icons {
+      opacity: 0;
+      transition: opacity 0.3s;
+      @media (max-width: 1024px) {
+        opacity: 1;
+      }
+    }
+    &-icon {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: $title;
+      stroke-width: 1.5px;
+      transition: stroke 0.3s;
+      &:hover {
+        stroke: $secondary;
+      }
+    }
+  }
+
   &-form {
     padding: 30px 30px 10px 30px;
     border: 1px solid $border;
@@ -54,16 +75,14 @@
     padding: 30px 30px 0;
     margin-bottom: 24px;
 
-    @media (max-width: 599px) {
-      padding: 16px 16px 0px;
+    &:hover {
+      .checkout-edit-icons {
+        opacity: 1;
+      }
     }
 
-    &-edit .icon {
-      width: 22px;
-      height: 22px;
-      fill: none;
-      stroke: #484949;
-      stroke-width: 1.5px;
+    @media (max-width: 599px) {
+      padding: 16px 16px 0px;
     }
 
     &-title {
@@ -93,6 +112,11 @@
   }
 
   .shopping-cart {
+    &:hover {
+      .checkout-edit-icons {
+        opacity: 1;
+      }
+    }
     &-name {
       @include fz(32);
       font-weight: 600;
@@ -126,14 +150,6 @@
     &-edit {
       @media (max-width: 395px) {
         display: none;
-      }
-
-      .icon {
-        width: 22px;
-        height: 22px;
-        fill: none;
-        stroke: #484949;
-        stroke-width: 1.5px;
       }
     }
   }

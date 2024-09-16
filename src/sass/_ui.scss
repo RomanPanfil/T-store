@@ -267,7 +267,7 @@ img {
   }
 
   &.right-chbx {
-    border: 1px solid #e1e3e5;
+    border: 1px solid $border;
     height: 48px;
 
     .ui-select {
@@ -280,13 +280,25 @@ img {
     .jq-selectbox {
       &__trigger-arrow {
         background-position: center;
-        background-image: url(../images/svg/arrow-down_grey.svg);
+        background-image: url(../images/svg/arrow-down.svg);
+        opacity: 0.5;
         width: 20px;
         height: 20px;
       }
 
+      &__select {
+        padding-left: 14px;
+        padding-right: 12px;
+        &-text {
+          @include fz(16);
+          font-weight: $weight;
+          line-height: 24px;
+          color: $title;
+        }
+      }
+
       &__select-text {
-        padding-right: 5px;
+        padding-right: 0;
       }
     }
 
@@ -362,24 +374,16 @@ img {
     }
   }
 
+  // &__dark {
+  //   background-color: #383838;
+
+  //   &:hover {
+  //     background-color: $btn_green_hover;
+  //   }
+  // }
+
   &__dark {
-    background-color: #383838;
-
-    &:hover {
-      background-color: $btn_green_hover;
-    }
-  }
-
-  &__greyer {
     background-color: #484949;
-
-    &:hover {
-      background-color: $btn_green_hover;
-    }
-  }
-
-  &__dark {
-    background-color: #383838;
 
     &:hover {
       background-color: $btn_green_hover;
@@ -574,6 +578,55 @@ img {
 
     .jq-selectbox {
       &__dropdown {
+        li {
+          padding: 8px 48px 8px 24px;
+          &.sel {
+            &::after {
+              content: "";
+              background-image: url(../images/svg/check_green.svg);
+              background-repeat: no-repeat;
+              background-position: center right;
+              background-size: 24px 24px;
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              right: 24px;
+            }
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  &__simple {
+    border: 1px solid $border;
+    border-radius: 6px;
+    background-color: #fff;
+    height: 48px;
+    color: $font-light;
+    width: 100%;
+
+    .jq-selectbox__trigger-arrow {
+      opacity: 0.5;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    .jq-selectbox {
+      &__select {
+        padding-left: 14px;
+        padding-right: 16px;
+        &-text {
+          @include fz(16);
+          font-weight: $weight;
+          line-height: 24px;
+          color: $light-grey;
+        }
+      }
+      &__dropdown {
+        margin-top: 20px;
         li {
           padding: 8px 48px 8px 24px;
           &.sel {
@@ -923,6 +976,13 @@ img {
     height: 44px;
     line-height: 44px;
     transition: background-color 0.3s, color 0.3s;
+
+    &__white {
+      background: #ffffff;
+      border: 1px solid #e1e3e5;
+      height: 40px;
+      line-height: 40px;
+    }
 
     &.active {
       background-color: $btn_orange;

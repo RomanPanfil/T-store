@@ -1,722 +1,277 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=1024"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T-store</title>
-    <meta name="keywords" content="t-store" />
-    <meta name="description" content="t-store" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-      integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    > -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- header start -->
-      <header class="header">
-        <div class="header-top">
-          <div class="container">
-            <div class="header-top-wrapper">
-              <button class="burger-btn">
-                <span></span>
-              </button>
-              <a href="#" class="header-logo">
-                <img src="./images/logo.png" alt="logo" />
-              </a>
-              <div class="header-nav-wrapper">
-                <nav class="header-nav">
-                  <ul>
-                    <li>
-                      <a href="#"> Laser cut </a>
-                      <div class="header-nav-sub">
-                        <ul>
-                          <li>
-                            <a href="#"> Holidays </a>
-                          </li>
-                          <li>
-                            <a href="#"> Flowers/plants </a>
-                          </li>
-                          <li>
-                            <a href="#"> Professional </a>
-                          </li>
-                          <li>
-                            <a href="#"> Keychain </a>
-                          </li>
-                          <li>
-                            <a href="#"> Lantern </a>
-                          </li>
-                          <li>
-                            <a href="#"> Gift box/greeting card </a>
-                          </li>
-                          <li>
-                            <a href="#"> Kids, baby </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> School </a>
-                          </li>
-                          <li>
-                            <a href="#"> Sport </a>
-                          </li>
-                          <li>
-                            <a href="#"> Jewellery </a>
-                          </li>
-                          <li>
-                            <a href="#"> Mystical </a>
-                          </li>
-                          <li>
-                            <a href="#"> Birthday </a>
-                          </li>
-                          <li>
-                            <a href="#"> Family </a>
-                          </li>
-                          <li>
-                            <a href="#"> Home decor </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> Animals </a>
-                          </li>
-                          <li>
-                            <a href="#"> Wedding </a>
-                          </li>
-                          <li>
-                            <a href="#"> Memorial </a>
-                          </li>
-                          <li>
-                            <a href="#"> Template </a>
-                          </li>
-                          <li>
-                            <a href="#"> Religious </a>
-                          </li>
-                          <li>
-                            <a href="#"> Monogram/alphabet </a>
-                          </li>
-                          <li>
-                            <a href="#"> Farmhouse </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> Man </a>
-                          </li>
-                          <li>
-                            <a href="#"> Office </a>
-                          </li>
-                          <li>
-                            <a href="#"> Hobbies </a>
-                          </li>
-                          <li>
-                            <a href="#"> Shadowbox </a>
-                          </li>
-                          <li>
-                            <a href="#"> Camping </a>
-                          </li>
-                          <li>
-                            <a href="#"> Awareness </a>
-                          </li>
-                          <li>
-                            <a href="#"> Western </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#"> Engraving </a>
-                      <div class="header-nav-sub">
-                        <ul>
-                          <li>
-                            <a href="#"> Holidays </a>
-                          </li>
-                          <li>
-                            <a href="#"> Flowers/plants </a>
-                          </li>
-                          <li>
-                            <a href="#"> Professional </a>
-                          </li>
-                          <li>
-                            <a href="#"> Keychain </a>
-                          </li>
-                          <li>
-                            <a href="#"> Kids, baby </a>
-                          </li>
-                          <li>
-                            <a href="#"> School </a>
-                          </li>
-                          <li>
-                            <a href="#"> Sport </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> Mystical </a>
-                          </li>
-                          <li>
-                            <a href="#"> Birthday </a>
-                          </li>
-                          <li>
-                            <a href="#"> Family </a>
-                          </li>
-                          <li>
-                            <a href="#"> Animals </a>
-                          </li>
-                          <li>
-                            <a href="#"> Wedding </a>
-                          </li>
-                          <li>
-                            <a href="#"> Memorial </a>
-                          </li>
-                          <li>
-                            <a href="#"> Religious </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> Monogram/alphabet </a>
-                          </li>
-                          <li>
-                            <a href="#"> Ornaments </a>
-                          </li>
-                          <li>
-                            <a href="#"> Farmhouse </a>
-                          </li>
-                          <li>
-                            <a href="#"> Man </a>
-                          </li>
-                          <li>
-                            <a href="#"> hobbies </a>
-                          </li>
-                          <li>
-                            <a href="#"> Camping </a>
-                          </li>
-                          <li>
-                            <a href="#"> Awareness </a>
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <a href="#"> Western </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li>
-                      <a href="#"> Mega Bundle </a>
-                    </li>
-                    <li>
-                      <a href="#"> FREE </a>
-                    </li>
-                    <li>
-                      <a href="#"> About </a>
-                    </li>
-                    <li>
-                      <a href="#"> Blog </a>
-                    </li>
-                  </ul>
-                </nav>
-                <a href="#" class="header-full ui-btn ui-btn__orange">
-                  Full access for $5.99
-                </a>
-              </div>
-              <div class="header-links">
-                <a href="#" class="header-links-item">
-                  <svg class="header-links-icon">
-                    <use xlink:href="svg/svg/symbols.svg#basket" />
-                  </svg>
-                  <div class="header-links-count">2</div>
-                </a>
-                <a
-                  href="#"
-                  class="header-links-item header-links-item__hidden-mobile"
-                >
-                  <svg class="header-links-icon">
-                    <use xlink:href="svg/svg/symbols.svg#heart" />
-                  </svg>
-                </a>
-                <a href="#" class="header-links-item">
-                  <svg class="header-links-icon">
-                    <use xlink:href="svg/svg/symbols.svg#profile" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  class="header-links-item header-links-item__hidden-mobile"
-                >
-                  <svg class="header-links-icon">
-                    <use xlink:href="svg/svg/symbols.svg#message" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="header-bottom">
-          <div class="container">
-            <form class="header-bottom-search">
-              <div class="ui-search-group">
-                <select name="search" id="search" class="ui-select">
-                  <option value="0" selected>All Categories</option>
-                  <option value="1">Laser cut</option>
-                  <option value="2">Engraving</option>
-                  <option value="3">Bundle</option>
-                </select>
-                <input type="search" class="ui-search-group-input" />
-                <button class="ui-btn ui-btn__green">
-                  <span>Search</span>
-                  <svg class="icon">
-                    <use xlink:href="svg/svg/symbols.svg#zoom-out" />
-                  </svg>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </header>
-      <!-- header end -->
-
-      <main class="main">
-        <div class="container">
-          <div class="page-wrapper">
-            <ul class="breadcrumbs">
-              <li>
-                <a href="#"> Home </a>
-              </li>
-              <li>Billing Details</li>
-            </ul>
-            <h1 class="page-title">Billing Details</h1>
-            <form class="checkout api-checkout-form">
+<!--#include file="inc-header.html"-->
+<main class="main">
+  <div class="container">
+    <div class="page-wrapper">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>Billing Details</li>
+      </ul>
+      <h1 class="page-title">Billing Details</h1>
+      <form class="checkout api-checkout-form">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="checkout-form">
               <div class="row">
-                <div class="col-md-8">
-                  <div class="checkout-form">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="ui-field">
-                          <label class="ui-field-name" for="firstName"
-                            >First Name *</label
-                          >
-                          <input
-                            type="text"
-                            class="ui-input"
-                            name="first-name"
-                            id="first-name"
-                            placeholder="Ivan"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="ui-field">
-                          <label class="ui-field-name" for="lastName"
-                            >Last Name *</label
-                          >
-                          <input
-                            type="text"
-                            class="ui-input"
-                            name="last-name"
-                            id="last-name"
-                            placeholder="Ivanov"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="ui-field">
-                          <label class="ui-field-name" for="country"
-                            >Country of residence *</label
-                          >
-                          <input
-                            type="text"
-                            class="ui-input"
-                            name="country"
-                            id="country"
-                            placeholder="Belarus"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="ui-field">
-                          <label class="ui-field-name" for="email"
-                            >Email *</label
-                          >
-                          <input
-                            type="text"
-                            class="ui-input"
-                            name="email"
-                            id="email"
-                            placeholder="Ivanov@gmail.com"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="payment-method">
-                    <div class="payment-method-header">
-                      <div class="payment-method-title">Payment methods</div>
-                      <a href="#" class="payment-method-edit">
-                        <svg class="icon">
-                          <use
-                            xlink:href="svg/svg/symbols.svg#edit-pencil"
-                          ></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="payment-items">
-                      <label class="payment-item" for="payment-1">
-                        <input
-                          class="payment-item-input"
-                          id="payment-1"
-                          type="radio"
-                          name="payment"
-                          value="1"
-                          checked
-                        />
-                        PayPal
-                        <img
-                          src="./images/pay-pal.png"
-                          alt="pay-pal"
-                          class="payment-item-pic"
-                        />
-                      </label>
-                    </div>
-                  </div>
-                  <div class="shopping-cart">
-                    <div class="shopping-cart-header">
-                      <div class="shopping-cart-name">
-                        Your order <span>(2 Items)</span>
-                      </div>
-                      <a href="#" class="shopping-cart-edit">
-                        <svg class="icon">
-                          <use
-                            xlink:href="svg/svg/symbols.svg#edit-pencil"
-                          ></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="shopping-cart-item">
-                      <div class="shopping-cart-image">
-                        <img
-                          src="./images/examples/product-1.jpg"
-                          alt="product"
-                          width="150"
-                          height="100"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="shopping-cart-info">
-                        <div class="shopping-cart-title">
-                          The Script Collection
-                          <br />
-                          Bundle
-                        </div>
-                        <div class="shopping-cart-price">
-                          <div class="shopping-cart-price-wrapper">
-                            <div class="shopping-cart-price-big">$1.00</div>
-                            <div class="shopping-cart-price-small">$5.00</div>
-                          </div>
-                          <div class="shopping-cart-actions">
-                            <a href="#" class="shopping-cart-action">
-                              <svg class="shopping-cart-actions-icon">
-                                <use xlink:href="svg/svg/symbols.svg#heart-2" />
-                              </svg>
-                            </a>
-                            <a href="#" class="shopping-cart-action">
-                              <svg class="shopping-cart-actions-icon">
-                                <use xlink:href="svg/svg/symbols.svg#trash-2" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="shopping-cart-item">
-                      <div class="shopping-cart-image">
-                        <img
-                          src="./images/examples/product-2.jpg"
-                          alt="product"
-                          width="150"
-                          height="100"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div class="shopping-cart-info">
-                        <div class="shopping-cart-title">
-                          Christmas Wooden Card Laser Cut SVG | Christmas
-                          <br />
-                          Laser Cut
-                        </div>
-                        <div class="shopping-cart-price">
-                          <div class="shopping-cart-price-wrapper">
-                            <div class="shopping-cart-price-big">$2.00</div>
-                            <div class="shopping-cart-price-small">$10.00</div>
-                          </div>
-                          <div class="shopping-cart-actions">
-                            <a href="#" class="shopping-cart-action">
-                              <svg class="shopping-cart-actions-icon">
-                                <use xlink:href="svg/svg/symbols.svg#heart-2" />
-                              </svg>
-                            </a>
-                            <a href="#" class="shopping-cart-action">
-                              <svg class="shopping-cart-actions-icon">
-                                <use xlink:href="svg/svg/symbols.svg#trash-2" />
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="subtotal">
-                    <div class="subtotal-head">
-                      <div class="subtotal-head-titles">
-                        <div class="subtotal-head-title">Cart Subtotal</div>
-                        <div class="subtotal-head-subtitle">
-                          You are saving $15.00
-                        </div>
-                      </div>
-                      <div class="subtotal-head-price">$3.00</div>
-                    </div>
-                    <div class="subtotal-main">
-                      <div class="subtotal-main-head">
-                        <div class="subtotal-main-title">Total</div>
-                        <div class="subtotal-main-price">$3.00</div>
-                      </div>
-                      <div class="subtotal-promo">
-                        <input
-                          type="text"
-                          class="ui-input"
-                          placeholder="Promo code"
-                        />
-                        <button class="ui-btn ui-btn__dark">Apply</button>
-                      </div>
-                      <button
-                        type="submit"
-                        class="subtotal-checkout ui-btn ui-btn__green ui-btn__block"
-                      >
-                        Proceed to Checkout
-                      </button>
-                      <label class="subtotal-agree">
-                        <input
-                          type="checkbox"
-                          id="is-agree"
-                          name="is-agree"
-                          class="ui-checkbox"
-                        />
-                        <div class="subtotal-agree-text">
-                          By purchasing you agree to the terms and conditions
-                          and our cancellation policy
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <script>
-              document.addEventListener("DOMContentLoaded", (event) => {
-                $(document).ready(function () {
-                  $(".api-checkout-form").on("submit", function (e) {
-                    if (!$(".api-checkout-form").valid()) e.preventDefault();
-                  });
-                  $(".api-checkout-form").validate({
-                    errorElement: "span",
-                    errorClass: "invalid",
-
-                    rules: {
-                      "first-name": {
-                        required: true,
-                        // lettersonly: true,
-                      },
-                      "last-name": {
-                        required: true,
-                        // lettersonly: true,
-                      },
-                      "is-agree": {
-                        required: true,
-                      },
-                      country: {
-                        required: true,
-                      },
-                      email: {
-                        required: true,
-                        email: true,
-                      },
-                    },
-                    errorPlacement: function (error, element) {
-                      if (element.hasClass("ui-select")) {
-                        element.closest(".ui-field").append(error);
-                      }
-                      if (element.hasClass("ui-input")) {
-                        element.closest(".ui-field").append(error);
-                      }
-                    },
-                  });
-                });
-              });
-            </script>
-          </div>
-        </div>
-      </main>
-      <!-- footer start -->
-      <footer class="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="footer-top-wrapper">
-              <div class="footer-offer">
-                <a href="#" class="footer-logo">
-                  <img src="./images/logo.png" alt="logo" />
-                </a>
-                <div class="footer-offer-txt">
-                  We offer free design resources each week and a marketplace
-                  which allows graphic designers to register and sell their
-                  products.
-                </div>
-                <div class="ui-socials">
-                  <a href="#">
-                    <img
-                      src="./images/svg/YouTube.svg"
-                      alt="youtube"
-                      class="ui-socials-icon"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="./images/svg/fb.svg"
-                      alt="facebook"
-                      class="ui-socials-icon"
-                    />
-                  </a>
-                  <a href="#">
-                    <img
-                      src="./images/svg/inst.svg"
-                      alt="instagram"
-                      class="ui-socials-icon"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="footer-nav-wrapper">
-                <div class="footer-nav">
-                  <div class="footer-title">Navigation</div>
-                  <ul>
-                    <li>
-                      <a href="#"> Cookie Policy </a>
-                    </li>
-                    <li>
-                      <a href="#"> Our Licenses </a>
-                    </li>
-                    <li>
-                      <a href="#"> Refund Policy </a>
-                    </li>
-                    <li>
-                      <a href="#"> Privacy Policy </a>
-                    </li>
-                    <li>
-                      <a href="#"> Website Terms and Conditions </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="footer-nav">
-                  <div class="footer-title">Information</div>
-                  <ul>
-                    <li>
-                      <a href="#"> Help Center </a>
-                    </li>
-                    <li>
-                      <a href="#"> FAQ </a>
-                    </li>
-                    <li>
-                      <a href="#"> Blog </a>
-                    </li>
-                    <li>
-                      <a href="#"> About Us </a>
-                    </li>
-                    <li>
-                      <a href="#"> Contact Us </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="footer-newsletter">
-                  <div class="footer-title">Newsletter</div>
-                  <form class="footer-subscribe">
+                <div class="col-md-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="firstName"
+                      >First Name *</label
+                    >
                     <input
                       type="text"
-                      placeholder="Your email"
                       class="ui-input"
+                      name="first-name"
+                      id="firstName"
+                      placeholder="Ivan"
                     />
-                    <button class="ui-btn ui-btn__green">Subscribe</button>
-                  </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="lastName"
+                      >Last Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="ui-input"
+                      name="last-name"
+                      id="lastName"
+                      placeholder="Ivanov"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="country"
+                      >Country of residence *</label
+                    >
+                    <input
+                      type="text"
+                      class="ui-input"
+                      name="country"
+                      id="country"
+                      placeholder="Belarus"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="email">Email *</label>
+                    <input
+                      type="text"
+                      class="ui-input"
+                      name="email"
+                      id="email"
+                      placeholder="Ivanov@gmail.com"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method">
+              <div class="payment-method-header">
+                <div class="payment-method-title">Payment methods</div>
+                <div class="checkout-edit-icons">
+                  <a href="#" class="payment-method-edit">
+                    <svg class="checkout-edit-icon">
+                      <use xlink:href="svg/svg/symbols.svg#edit-pencil"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="payment-items">
+                <label class="payment-item" for="payment-1">
+                  <input
+                    class="payment-item-input"
+                    id="payment-1"
+                    type="radio"
+                    name="payment"
+                    value="1"
+                    checked
+                  />
+                  PayPal
+                  <img
+                    src="./images/pay-pal.png"
+                    alt="pay-pal"
+                    class="payment-item-pic"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="shopping-cart">
+              <div class="shopping-cart-header">
+                <div class="shopping-cart-name">
+                  Your order <span>(2 Items)</span>
+                </div>
+                <div class="checkout-edit-icons">
+                  <a href="#" class="shopping-cart-edit">
+                    <svg class="checkout-edit-icon">
+                      <use xlink:href="svg/svg/symbols.svg#edit-pencil"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="shopping-cart-item">
+                <div class="shopping-cart-image">
+                  <img
+                    src="./images/examples/product-1.jpg"
+                    alt="product"
+                    width="150"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="shopping-cart-info">
+                  <div class="shopping-cart-title">
+                    The Script Collection Bundle
+                  </div>
+                  <div class="shopping-cart-price">
+                    <div class="shopping-cart-price-wrapper">
+                      <div class="shopping-cart-price-big">$1.00</div>
+                      <div class="shopping-cart-price-small">$5.00</div>
+                    </div>
+                    <div class="shopping-cart-actions">
+                      <a href="#" class="shopping-cart-action">
+                        <svg class="shopping-cart-actions-icon">
+                          <use xlink:href="svg/svg/symbols.svg#heart-2" />
+                        </svg>
+                      </a>
+                      <a href="#" class="shopping-cart-action">
+                        <svg class="shopping-cart-actions-icon">
+                          <use xlink:href="svg/svg/symbols.svg#trash-2" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="shopping-cart-item">
+                <div class="shopping-cart-image">
+                  <img
+                    src="./images/examples/product-2.jpg"
+                    alt="product"
+                    width="150"
+                    height="100"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="shopping-cart-info">
+                  <div class="shopping-cart-title">
+                    Christmas Wooden Card Laser Cut SVG | Christmas Laser Cut
+                  </div>
+                  <div class="shopping-cart-price">
+                    <div class="shopping-cart-price-wrapper">
+                      <div class="shopping-cart-price-big">$2.00</div>
+                      <div class="shopping-cart-price-small">$10.00</div>
+                    </div>
+                    <div class="shopping-cart-actions">
+                      <a href="#" class="shopping-cart-action">
+                        <svg class="shopping-cart-actions-icon">
+                          <use xlink:href="svg/svg/symbols.svg#heart-2" />
+                        </svg>
+                      </a>
+                      <a href="#" class="shopping-cart-action">
+                        <svg class="shopping-cart-actions-icon">
+                          <use xlink:href="svg/svg/symbols.svg#trash-2" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="footer-bottom-wrapper">
-              <div class="footer-copy">© 2024. All rights reserved.</div>
-              <div class="footer-payment">
-                <img
-                  src="./images/svg/visa.svg"
-                  alt="visa"
-                  class="footer-payment-image"
-                />
-                <img
-                  src="./images/svg/mastercard.svg"
-                  alt="mastercard"
-                  class="footer-payment-image"
-                />
-                <img
-                  src="./images/svg/apple-pay.svg"
-                  alt="apple-pay"
-                  class="footer-payment-image"
-                />
+          <div class="col-md-4">
+            <div class="subtotal">
+              <div class="subtotal-head">
+                <div class="subtotal-head-titles">
+                  <div class="subtotal-head-title">Cart Subtotal</div>
+                  <div class="subtotal-head-subtitle">
+                    You are saving $15.00
+                  </div>
+                </div>
+                <div class="subtotal-head-price">$3.00</div>
+              </div>
+              <div class="subtotal-main">
+                <div class="subtotal-main-head">
+                  <div class="subtotal-main-title">Total</div>
+                  <div class="subtotal-main-price">$3.00</div>
+                </div>
+                <div class="subtotal-promo">
+                  <input
+                    type="text"
+                    class="ui-input"
+                    placeholder="Promo code"
+                  />
+                  <button class="ui-btn ui-btn__dark">Apply</button>
+                </div>
+                <button
+                  type="submit"
+                  class="subtotal-checkout ui-btn ui-btn__green ui-btn__block"
+                >
+                  Proceed to Checkout
+                </button>
+                <label class="subtotal-agree">
+                  <input
+                    type="checkbox"
+                    id="is-agree"
+                    name="is-agree"
+                    class="ui-checkbox"
+                  />
+                  <span class="subtotal-agree-text">
+                    By purchasing you agree to the terms and conditions and our
+                    cancellation policy
+                  </span>
+                </label>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- footer end -->
+      </form>
+      <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+          $(document).ready(function () {
+            $(".api-checkout-form").on("submit", function (e) {
+              if (!$(".api-checkout-form").valid()) e.preventDefault();
+            });
+            $(".api-checkout-form").validate({
+              errorElement: "span",
+              errorClass: "invalid",
+
+              rules: {
+                "first-name": {
+                  required: true,
+                },
+                "last-name": {
+                  required: true,
+                  // lettersonly: true,
+                },
+                "is-agree": {
+                  required: true,
+                },
+                country: {
+                  required: true,
+                },
+                email: {
+                  required: true,
+                  email: true,
+                },
+              },
+              errorPlacement: function (error, element) {
+                if (element.hasClass("ui-select")) {
+                  element.closest(".ui-field").append(error);
+                }
+                if (element.hasClass("ui-input")) {
+                  element.closest(".ui-field").append(error);
+                }
+              },
+            });
+          });
+        });
+      </script>
     </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"
-      defer
-    ></script>
-    <script src="https://unpkg.com/imask"></script>
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
-    <script src="./scripts/scripts.js"></script>
-  </body>
-</html>
+  </div>
+</main>
+<!--#include file="inc-footer.html"-->

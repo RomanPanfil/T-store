@@ -1,5 +1,6 @@
 .account {
   &-nav {
+    margin-bottom: 40px;
     li {
       padding: 13px 0;
       border-bottom: 1px solid $border;
@@ -21,12 +22,62 @@
       }
     }
   }
+  &-photo {
+    &-upd {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 60px;
+      @media (max-width: 599px) {
+        margin-bottom: 40px;
+      }
+
+      .ui-btn {
+        @media (max-width: 599px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-user {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100%;
+    }
+  }
+
+  .ui-field {
+    @media (max-width: 599px) {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .form-auth-edit {
   margin-bottom: 60px;
 
+  @media (max-width: 599px) {
+    margin-bottom: 48px;
+  }
+
   .ui-btn {
     margin-top: 8px;
+    @media (max-width: 599px) {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+}
+
+.form-update {
+  margin-bottom: 20px;
+
+  .ui-btn {
+    margin-top: 8px;
+    @media (max-width: 599px) {
+      width: 100%;
+    }
   }
 }
