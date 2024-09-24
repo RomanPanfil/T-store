@@ -483,4 +483,49 @@ document.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("resize", () => stickyScroll());
     }
   })();
+
+  (function () {
+    const planListToggles = document.querySelectorAll(
+      ".mbrship-card-choice .ui-toggle"
+    );
+    planListToggles.forEach((toggle) =>
+      toggle.addEventListener("click", () => {
+        const card = toggle.closest(".mbrship-card");
+        const costNode = card.querySelector(".mbrship-card-price");
+        const cost = toggle.getAttribute("data-cost");
+        const type = toggle.getAttribute("data-type");
+        console.log(costNode);
+        const spanType = document.createElement("span");
+        spanType.innerHTML = `/ ${type}`;
+
+        if (cost && spanType) {
+          costNode.innerHTML = `${cost}`;
+          costNode.append(spanType);
+        }
+
+        const toogleContentArr = card.querySelectorAll(
+          ".ui-toggle-content-item"
+        );
+
+        toogleContentArr.forEach((el) => el.classList.remove("active"));
+        const toogleContentNeed = card.querySelector(
+          `.ui-toggle-content-item[data-type="${type}"]`
+        );
+
+        toogleContentNeed.style.opacity = 0;
+        toogleContentNeed.classList.add("active");
+        setTimeout(() => {
+          toogleContentNeed.style.opacity = 1;
+        }, 100);
+      })
+    );
+  })();
+
+  $.validator.addMethod(
+    "noDigits",
+    function (value, element) {
+      return this.optional(element) || !/\d/.test(value);
+    },
+    "You cannot enter numbers in this field."
+  );
 });
