@@ -1,0 +1,202 @@
+.reviews {
+  &-categories {
+    &-txt {
+      @include fz(24);
+      color: $title;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+    &-options {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-card {
+    margin-top: 24px;
+    &:hover {
+      .reviews-card-edit {
+        &-txt {
+          opacity: 1;
+        }
+        &-icons {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-contents {
+      display: flex;
+      gap: 24px;
+      @media (max-width: 599px) {
+        gap: 12px;
+      }
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    &-photo-user {
+      width: 88px;
+      height: 88px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100%;
+      @media (max-width: 599px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-edit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      margin-top: 40px;
+      width: fit-content;
+      padding: 12px 0;
+      @media (max-width: 599px) {
+        margin-top: 24px;
+      }
+
+      &-txt {
+        opacity: 0;
+        @include fz(16);
+        color: $title;
+        font-weight: $weight;
+        line-height: 24px;
+        transition: all 0.3s;
+        @media (max-width: 1024px) {
+          opacity: 1;
+        }
+      }
+      &-icon {
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke: $title;
+        stroke-width: 1.5px;
+        transition: stroke 0.3s;
+      }
+      &-icons {
+        opacity: 0;
+        transition: opacity 0.3s;
+        @media (max-width: 1024px) {
+          opacity: 1;
+        }
+      }
+
+      &-action {
+        display: block;
+        height: 24px;
+      }
+
+      &:hover {
+        .reviews-card-edit {
+          &-txt {
+            color: $secondary;
+          }
+          &-icon {
+            stroke: $secondary;
+          }
+        }
+      }
+    }
+
+    &-response {
+      display: flex;
+      gap: 24px;
+      margin-top: 40px;
+      @media (max-width: 599px) {
+        margin-top: 24px;
+      }
+      &-content {
+        @include fz(16);
+        color: $title;
+        font-weight: $weight;
+        line-height: 24px;
+        margin-top: 32px;
+        flex: 1;
+      }
+      &-txt {
+        margin-top: 40px;
+      }
+    }
+
+    &-info {
+      @include fz(16);
+      color: $title;
+      font-weight: $weight;
+      line-height: 24px;
+      margin-top: 32px;
+      @media (max-width: 599px) {
+        margin-top: 16px;
+      }
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 40px 0;
+      cursor: pointer;
+      &-img {
+        @media (max-width: 599px) {
+          max-width: 100px;
+          margin-right: 12px;
+          height: unset;
+        }
+        aspect-ratio: 1.5;
+        margin-right: 24px;
+        max-width: 200px;
+        height: 120px;
+
+        img {
+          border-radius: 10px;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+      &-title {
+        @include fz(16);
+        color: $title;
+        font-weight: 600;
+        line-height: 24px;
+        flex: 1;
+      }
+    }
+
+    &-rate {
+      margin-top: 40px;
+      @media (max-width: 599px) {
+        margin-top: 24px;
+      }
+      &-icons {
+        display: inline-flex;
+      }
+      &-icon {
+        width: 20px;
+        height: 20px;
+        fill: #e1e3e5;
+        margin-right: 5px;
+        transition: fill 0.3s;
+        &.active {
+          fill: $secondary;
+        }
+      }
+      &-txt {
+        @include fz(16);
+        color: $title;
+        font-weight: $weight;
+        line-height: 24px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

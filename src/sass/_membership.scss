@@ -1,0 +1,114 @@
+.mbrship {
+  &-description {
+    &-title {
+      @include fz(24);
+      color: $title;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 6px;
+    }
+    &-txt {
+      @include fz(16);
+      color: $title;
+      font-weight: $weight;
+      line-height: 24px;
+      opacity: 0.5;
+    }
+  }
+
+  &-wrapper {
+    row-gap: 24px;
+  }
+
+  &-card {
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 40px 24px;
+    transition: all 0.3s;
+    margin-top: 24px;
+    border: 4px solid transparent;
+    display: block;
+    height: 100%;
+    position: relative;
+
+    .ui-btn {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+
+    &:hover {
+      background-color: #f4fafe;
+      box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
+    }
+
+    &.active {
+      border: 4px solid #f79e1b;
+      box-shadow: none;
+      background-color: #fff;
+    }
+
+    &-popular {
+      width: 140px;
+      height: 40px;
+      background-color: $secondary;
+      border-radius: 4px;
+      text-align: center;
+      padding: 10px 0;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      box-shadow: 0px 0px 10px 0px #e589001a;
+    }
+
+    &-header {
+      &-embl {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      &-title {
+        @include fz(32);
+        color: $title;
+        font-weight: 600;
+        line-height: 42px;
+        margin-bottom: 11px;
+      }
+      &-goal {
+        @include fz(16);
+        color: $title;
+        opacity: 0.5;
+        font-weight: $weight;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &-price {
+      @include fz(32);
+      color: $title;
+      font-weight: 600;
+      line-height: 42px;
+      margin-bottom: 24px;
+
+      span {
+        @include fz(16);
+        color: $title;
+        font-weight: $weight;
+        line-height: 24px;
+      }
+    }
+
+    &-choice {
+      margin-bottom: 36px;
+      &-content {
+        margin-top: 20px;
+      }
+    }
+  }
+}

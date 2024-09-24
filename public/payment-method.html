@@ -1,0 +1,228 @@
+<!--#include file="inc-header.html"-->
+<main class="main">
+  <div class="container">
+    <div class="page-wrapper">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="#"> Home </a>
+        </li>
+        <li>My Account</li>
+      </ul>
+      <h1 class="page-title">My Account</h1>
+      <div class="account">
+        <div class="row">
+          <div class="col-md-3 ui-sticky" data-minBreakpoint="1024">
+            <aside class="account-sidebar ui-sticky-element">
+              <nav class="account-nav">
+                <ul>
+                  <li>
+                    <a href="#">Account Information</a>
+                  </li>
+                  <li><a href="#">Account Security</a></li>
+                  <li><a href="#">Email Settings</a></li>
+                  <li><a href="#">Purchases</a></li>
+                  <li><a href="#">Reviews</a></li>
+                  <li class="active"><a href="#">Payment Method</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Membership</a></li>
+                  <li><a href="#">Log out</a></li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+          <div class="col-md-9">
+            <div class="payment">
+              <div class="payment-header">
+                Manage the cards saved on your account
+              </div>
+              <div class="payment-cards">
+                <div class="payment-cards-wrapper row">
+                  <div class="col-xs-7 col-sm-6 col-md-6 col-lg-5">
+                    <div class="payment-card">
+                      <div class="payment-card-info">
+                        <div class="payment-card-info-number">
+                          **** **** **** 1234
+                        </div>
+                        <a href="#" class="payment-card-delete">
+                          <svg class="payment-card-delete-icon">
+                            <use xlink:href="svg/svg/symbols.svg#trash-2"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="payment-card-date">05/25</div>
+                      <div class="payment-card-message">
+                        This card is set as your default payment method
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-7 col-sm-6 col-md-6 col-lg-5">
+                    <div class="payment-card">
+                      <div class="payment-card-info">
+                        <div class="payment-card-info-number">
+                          **** **** **** 5678
+                        </div>
+                        <a href="#" class="payment-card-delete">
+                          <svg class="payment-card-delete-icon">
+                            <use xlink:href="svg/svg/symbols.svg#trash-2"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="payment-card-date">05/25</div>
+                      <a href="#" class="payment-card-change">
+                        Set as default card</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="payment-add">
+                <div class="payment-add-title">Add a card to your account</div>
+                <form class="form-card-add">
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="name">Name on Card</label>
+                    <input
+                      type="text"
+                      class="ui-input"
+                      id="name"
+                      name="name"
+                      placeholder="Ivan"
+                    />
+                  </div>
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="cardNumb"
+                      >Card Number</label
+                    >
+                    <input
+                      type="text"
+                      class="ui-input"
+                      id="cardNumb"
+                      name="cardNumb"
+                      placeholder="0000 0000 0000 0000"
+                    />
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="ui-field">
+                        <label class="ui-field-name" for="expiryDate"
+                          >Expiry Date</label
+                        >
+                        <input
+                          type="text"
+                          class="ui-input"
+                          id="expiryDate"
+                          name="expiryDate"
+                          placeholder="MM / YY"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="ui-field">
+                        <label class="ui-field-name" for="secureCode"
+                          >Security Code</label
+                        >
+                        <input
+                          type="password"
+                          class="ui-input"
+                          id="secureCode"
+                          name="secureCode"
+                          placeholder="***"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ui-field">
+                    <label class="ui-field-name" for="postcode"
+                      >Zip Code / Postcode</label
+                    >
+                    <input
+                      type="text"
+                      class="ui-input"
+                      name="postcode"
+                      id="postcode"
+                      placeholder="000000"
+                    />
+                  </div>
+                  <button class="ui-btn ui-btn__green ui-btn__200">Save</button>
+                </form>
+                <script>
+                  document.addEventListener("DOMContentLoaded", (event) => {
+                    $(document).ready(function () {
+                      $(".form-card-add").on("submit", function (e) {
+                        if (!$(".form-card-add").valid()) e.preventDefault();
+                      });
+                      $(".form-card-add").validate({
+                        errorElement: "span",
+                        errorClass: "invalid",
+
+                        rules: {
+                          name: {
+                            required: true,
+                          },
+                          cardNumb: {
+                            required: true,
+                            minlength: 16,
+                            maxlength: 19,
+                          },
+                          expiryDate: {
+                            required: true,
+                          },
+                          secureCode: {
+                            required: true,
+                            minlength: 3,
+                            maxlength: 3,
+                          },
+                          postcode: {
+                            required: true,
+                            minlength: 6,
+                            maxlength: 6,
+                          },
+                        },
+                        errorPlacement: function (error, element) {
+                          if (element.hasClass("ui-select")) {
+                            element.closest(".ui-field").append(error);
+                          }
+                          if (element.hasClass("ui-input")) {
+                            element.closest(".ui-field").append(error);
+                          }
+                        },
+                      });
+
+                      IMask(document.getElementById("postcode"), {
+                        mask: "000000",
+                      });
+                      IMask(document.getElementById("expiryDate"), {
+                        mask: "MM\/YY",
+
+                        blocks: {
+                          YY: {
+                            mask: IMask.MaskedRange,
+                            from: 10,
+                            to: 40,
+                          },
+
+                          MM: {
+                            mask: IMask.MaskedRange,
+                            from: 1,
+                            to: 12,
+                          },
+                        },
+                      });
+                      IMask(document.getElementById("secureCode"), {
+                        mask: "000",
+                      });
+                      IMask(document.getElementById("cardNumb"), {
+                        mask: "0000 0000 0000 0000",
+                      });
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!--#include file="inc-footer.html"-->

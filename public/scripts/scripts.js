@@ -423,4 +423,64 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   })();
+
+  (function () {
+    const cards = document.querySelectorAll(".mbrship-card");
+
+    cards.forEach((card) => {
+      const toggles = card.querySelectorAll(".ui-toggle");
+
+      toggles.forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          // Удаляем класс active у всех переключателей в текущей карточке
+          toggles.forEach((t) => t.classList.remove("active"));
+          // Добавляем класс active к текущему переключателю
+          toggle.classList.add("active");
+        });
+      });
+    });
+  })();
+
+  (function () {
+    const stickyContainer = $(".ui-sticky");
+    if (stickyContainer.length > 0) {
+      const stickyNode = stickyContainer.find(".ui-sticky-element");
+
+      const minBreakpoint = Number(
+        stickyContainer.attr("data-minBreakpoint") ?? 0
+      );
+      const maxBreakpoint = Number(
+        stickyContainer.attr("data-maxBreakpoint") ?? 9999999
+      );
+
+      const stickyScroll = () => {
+        if (
+          window.innerWidth >= minBreakpoint &&
+          window.innerWidth <= maxBreakpoint
+        ) {
+          let stPosTop = stickyContainer.offset().top;
+          let stPosBottom = stPosTop + stickyContainer.height();
+
+          const scroll = window.scrollY;
+          const height = stickyNode.height();
+          if (scroll >= stPosTop && scroll + height <= stPosBottom)
+            stickyNode.css("transform", `translateY(${scroll - stPosTop}px`);
+          else if (scroll < stPosTop) {
+            stickyNode.css("transform", `translateY(0px)`);
+          } else if (scroll + height > stPosBottom) {
+            stickyNode.css(
+              "transform",
+              `translateY(${stickyContainer.height() - height}px)`
+            );
+          }
+        } else {
+          stickyNode.css("transform", `translateY(0px)`);
+        }
+      };
+
+      stickyScroll();
+      document.addEventListener("scroll", () => stickyScroll());
+      window.addEventListener("resize", () => stickyScroll());
+    }
+  })();
 });

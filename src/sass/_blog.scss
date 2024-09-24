@@ -1,0 +1,60 @@
+.blog {
+  &-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &-cards {
+    &-wrapper {
+      margin-bottom: 60px;
+    }
+  }
+
+  &-card {
+    margin-bottom: 40px;
+    height: calc(100% - 40px);
+    cursor: pointer;
+
+    &:hover {
+      .blog-card-image img {
+        transform: scale(1.1);
+      }
+    }
+
+    &-image {
+      margin-bottom: 12px;
+      aspect-ratio: 1.45;
+      object-fit: cover;
+      border-radius: 10px;
+      background-color: $bg_light;
+      overflow: hidden;
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+      }
+    }
+    &-links {
+      width: fit-content;
+      margin-bottom: 10px;
+    }
+    &-title {
+      @include fz(16);
+      font-weight: 600;
+      line-height: 24px;
+      color: $title;
+      margin-bottom: 10px;
+    }
+    &-pretext {
+      @include fz(16);
+      font-weight: $weight;
+      line-height: 24px;
+      color: $title;
+      opacity: 0.5;
+    }
+  }
+}

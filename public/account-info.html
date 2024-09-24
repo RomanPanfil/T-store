@@ -11,8 +11,8 @@
       <h1 class="page-title">My Account</h1>
       <div class="account">
         <div class="row">
-          <div class="col-md-3">
-            <aside class="account-sidebar">
+          <div class="col-md-3 ui-sticky" data-minBreakpoint="1024">
+            <aside class="account-sidebar ui-sticky-element">
               <nav class="account-nav">
                 <ul>
                   <li class="active">
@@ -42,7 +42,7 @@
             </div>
             <form class="form-auth-edit">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="emailAdress"
                       >Email Address</label
@@ -56,7 +56,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="password"
                       >Enter Password</label
@@ -78,7 +78,7 @@
 
             <form class="form-update">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="firstName"
                       >First Name</label
@@ -92,7 +92,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="lastName"
                       >Last Name</label
@@ -106,32 +106,24 @@
                     />
                   </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="phoneNumber"
                       >Phone Number</label
                     >
-                    <div class="ui-search-group right-chbx">
-                      <select
-                        class="ui-select"
-                        name="name-operator"
-                        id="nameOperator"
-                      >
-                        <option selected value="1">BY</option>
-                        <option value="2">En</option>
-                      </select>
+                    <div class="ui-tel-group">
                       <input
                         type="tel"
-                        class="ui-search-group-input"
+                        class="ui-tel-group-input"
                         name="number"
                         id="phoneNumber"
-                        placeholder="+375 (29) 000-00-00"
+                        required
                       />
                     </div>
                   </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="country">Country</label>
                     <select
@@ -145,7 +137,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="postcode"
                       >Zip Code / Postcode</label
@@ -161,7 +153,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="language">Language</label>
                     <select
@@ -208,6 +200,9 @@
                       if (element.hasClass("ui-input")) {
                         element.closest(".ui-field").append(error);
                       }
+                      if (element.hasClass("ui-tel-group-input")) {
+                        element.closest(".ui-field").append(error);
+                      }
                     },
                   });
 
@@ -242,10 +237,10 @@
                       },
                     },
                     errorPlacement: function (error, element) {
-                      if (element.hasClass("ui-select")) {
+                      if (element.hasClass("ui-tel-group-input")) {
                         element.closest(".ui-field").append(error);
                       }
-                      if (element.hasClass("ui-search-group-input")) {
+                      if (element.hasClass("ui-select")) {
                         element.closest(".ui-field").append(error);
                       }
                       if (element.hasClass("ui-input")) {
@@ -256,8 +251,23 @@
                 });
 
                 IMask(document.getElementById("postcode"), { mask: "000000" });
-                IMask(document.getElementById("phoneNumber"), {
-                  mask: "+375 (29) 000-00-00",
+                // IMask(document.getElementById("phoneNumber"), {
+                //   mask: "+375 (29) 000-00-00",
+                // });
+
+                const phoneInput = document.querySelector(
+                  'input[name="number"]'
+                );
+                window.intlTelInput(phoneInput, {
+                  separateDialCode: true,
+                  initialCountry: "by",
+                  strictMode: true,
+                  hiddenInput: function (telInputName) {
+                    return {
+                      phone: "phone_full",
+                      country: "country_code",
+                    };
+                  },
                 });
               });
             </script>

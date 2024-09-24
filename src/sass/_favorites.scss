@@ -1,0 +1,15 @@
+.favorites {
+  &-filter {
+    margin-bottom: 12px;
+    &-search {
+      margin-bottom: 12px;
+    }
+    &-select {
+      margin-bottom: 12px;
+    }
+
+    .ui-select__filter {
+      width: 100%;
+    }
+  }
+}
