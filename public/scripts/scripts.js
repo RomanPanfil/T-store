@@ -441,48 +441,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
-  (function () {
-    const stickyContainer = $(".ui-sticky");
-    if (stickyContainer.length > 0) {
-      const stickyNode = stickyContainer.find(".ui-sticky-element");
+  // (function () {
+  //   const stickyContainer = $(".ui-sticky");
+  //   if (stickyContainer.length > 0) {
+  //     const stickyNode = stickyContainer.find(".ui-sticky-element");
 
-      const minBreakpoint = Number(
-        stickyContainer.attr("data-minBreakpoint") ?? 0
-      );
-      const maxBreakpoint = Number(
-        stickyContainer.attr("data-maxBreakpoint") ?? 9999999
-      );
+  //     const minBreakpoint = Number(
+  //       stickyContainer.attr("data-minBreakpoint") ?? 0
+  //     );
+  //     const maxBreakpoint = Number(
+  //       stickyContainer.attr("data-maxBreakpoint") ?? 9999999
+  //     );
 
-      const stickyScroll = () => {
-        if (
-          window.innerWidth >= minBreakpoint &&
-          window.innerWidth <= maxBreakpoint
-        ) {
-          let stPosTop = stickyContainer.offset().top;
-          let stPosBottom = stPosTop + stickyContainer.height();
+  //     const stickyScroll = () => {
+  //       if (
+  //         window.innerWidth >= minBreakpoint &&
+  //         window.innerWidth <= maxBreakpoint
+  //       ) {
+  //         let stPosTop = stickyContainer.offset().top;
+  //         let stPosBottom = stPosTop + stickyContainer.height();
 
-          const scroll = window.scrollY;
-          const height = stickyNode.height();
-          if (scroll >= stPosTop && scroll + height <= stPosBottom)
-            stickyNode.css("transform", `translateY(${scroll - stPosTop}px`);
-          else if (scroll < stPosTop) {
-            stickyNode.css("transform", `translateY(0px)`);
-          } else if (scroll + height > stPosBottom) {
-            stickyNode.css(
-              "transform",
-              `translateY(${stickyContainer.height() - height}px)`
-            );
-          }
-        } else {
-          stickyNode.css("transform", `translateY(0px)`);
-        }
-      };
+  //         const scroll = window.scrollY;
+  //         const height = stickyNode.height();
+  //         if (scroll >= stPosTop && scroll + height <= stPosBottom)
+  //           stickyNode.css("transform", `translateY(${scroll - stPosTop}px`);
+  //         else if (scroll < stPosTop) {
+  //           stickyNode.css("transform", `translateY(0px)`);
+  //         } else if (scroll + height > stPosBottom) {
+  //           stickyNode.css(
+  //             "transform",
+  //             `translateY(${stickyContainer.height() - height}px)`
+  //           );
+  //         }
+  //       } else {
+  //         stickyNode.css("transform", `translateY(0px)`);
+  //       }
+  //     };
 
-      stickyScroll();
-      document.addEventListener("scroll", () => stickyScroll());
-      window.addEventListener("resize", () => stickyScroll());
-    }
-  })();
+  //     stickyScroll();
+  //     document.addEventListener("scroll", () => stickyScroll());
+  //     window.addEventListener("resize", () => stickyScroll());
+  //   }
+  // })();
 
   (function () {
     const planListToggles = document.querySelectorAll(
@@ -494,7 +494,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const costNode = card.querySelector(".mbrship-card-price");
         const cost = toggle.getAttribute("data-cost");
         const type = toggle.getAttribute("data-type");
-        console.log(costNode);
         const spanType = document.createElement("span");
         spanType.innerHTML = `/ ${type}`;
 
@@ -502,21 +501,6 @@ document.addEventListener("DOMContentLoaded", () => {
           costNode.innerHTML = `${cost}`;
           costNode.append(spanType);
         }
-
-        const toogleContentArr = card.querySelectorAll(
-          ".ui-toggle-content-item"
-        );
-
-        toogleContentArr.forEach((el) => el.classList.remove("active"));
-        const toogleContentNeed = card.querySelector(
-          `.ui-toggle-content-item[data-type="${type}"]`
-        );
-
-        toogleContentNeed.style.opacity = 0;
-        toogleContentNeed.classList.add("active");
-        setTimeout(() => {
-          toogleContentNeed.style.opacity = 1;
-        }, 100);
       })
     );
   })();
@@ -528,4 +512,30 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     "You cannot enter numbers in this field."
   );
+
+  if ($(".ui-sticky").length) {
+    if ($(".ui-sticky-node").height() < $(".ui-sticky-element").height())
+      $(".ui-sticky-node").height($(".ui-sticky-element").height());
+
+    const stickyScroll = () => {
+      var windowOffset = $(window).scrollTop(),
+        floatOffset = $(".ui-sticky-node").offset().top,
+        contentHeight = $(".ui-sticky").height(),
+        floatHeight = $(".ui-sticky-element").height(),
+        floatStop = floatOffset + contentHeight - floatHeight;
+
+      if (windowOffset > floatOffset && windowOffset < floatStop) {
+        $(".ui-sticky-element").addClass("float").removeClass("flip-bottom");
+      } else {
+        $(".ui-sticky-element").removeClass("float").addClass("flip-bottom");
+
+        if (windowOffset < floatStop) {
+          $(".ui-sticky-element").removeClass("flip-bottom");
+        }
+      }
+    };
+    $(window).on("scroll", () => stickyScroll());
+
+    stickyScroll();
+  } //if end
 });

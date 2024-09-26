@@ -28,6 +28,10 @@
       }
     }
 
+    &:last-of-type .reviews-card-item {
+      padding-bottom: 0;
+    }
+
     &-contents {
       display: flex;
       gap: 24px;
@@ -143,6 +147,7 @@
       align-items: center;
       padding: 40px 0;
       cursor: pointer;
+
       &-img {
         @media (max-width: 599px) {
           max-width: 100px;

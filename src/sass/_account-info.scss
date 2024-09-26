@@ -1,6 +1,9 @@
 .account {
+  margin-bottom: 20px;
   &-nav {
-    margin-bottom: 40px;
+    @media (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
     li {
       padding: 13px 0;
       border-bottom: 1px solid $border;
@@ -72,8 +75,6 @@
 }
 
 .form-update {
-  margin-bottom: 20px;
-
   .ui-btn {
     margin-top: 8px;
     @media (max-width: 599px) {

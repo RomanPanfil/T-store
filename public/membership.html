@@ -11,24 +11,26 @@
       <h1 class="page-title">My Account</h1>
       <div class="account">
         <div class="row">
-          <div class="col-md-3 ui-sticky" data-minBreakpoint="1024">
-            <aside class="account-sidebar ui-sticky-element">
-              <nav class="account-nav">
-                <ul>
-                  <li>
-                    <a href="#">Account Information</a>
-                  </li>
-                  <li><a href="#">Account Security</a></li>
-                  <li><a href="#">Email Settings</a></li>
-                  <li><a href="#">Purchases</a></li>
-                  <li><a href="#">Reviews</a></li>
-                  <li><a href="#">Payment Method</a></li>
-                  <li><a href="#">Favorites</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li class="active"><a href="#">Membership</a></li>
-                  <li><a href="#">Log out</a></li>
-                </ul>
-              </nav>
+          <div class="col-md-3">
+            <aside class="account-sidebar ui-sticky-node">
+              <div class="ui-sticky">
+                <nav class="account-nav ui-sticky-element">
+                  <ul>
+                    <li class="active">
+                      <a href="#">Account Information</a>
+                    </li>
+                    <li><a href="#">Account Security</a></li>
+                    <li><a href="#">Email Settings</a></li>
+                    <li><a href="#">Purchases</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Payment Method</a></li>
+                    <li><a href="#">Favorites</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Log out</a></li>
+                  </ul>
+                </nav>
+              </div>
             </aside>
           </div>
           <div class="col-md-9">
@@ -60,82 +62,46 @@
                       >
                         Monthly
                       </div>
-                      <div class="ui-toggle" data-type="year" data-cost="$8.99">
+                      <div
+                        class="ui-toggle"
+                        data-type="year"
+                        data-cost="$59.99"
+                      >
                         Annual
                       </div>
                     </div>
 
-                    <div class="ui-toggle-content">
-                      <div
-                        class="ui-toggle-content-item active mbrship-card-choice-content"
-                        data-type="month"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">Unlimited access</span>
-                            to thousands
-                            <span class="bold"> of single</span> designs <br />
-                            <span class="light-grey"
-                              >Bundles are not included, but most of the
-                              products in the bundle can be found on the site as
-                              individual designs. For free access to the
-                              bundles, we recommend the Personal Plan + or the
-                              Commercial Plan +</span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for <span class="bold">personal use</span>
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                          <li>
-                            Commercial use is
-                            <span class="bold">not allowed</span> <br />
-                            <span class="light-grey">
-                              for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                      <div
-                        class="ui-toggle-content-item mbrship-card-choice-content"
-                        data-type="year"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">YEAR Unlimited access</span>
-                            to thousands
-                            <span class="bold"> of single</span> designs <br />
-                            <span class="light-grey"
-                              >Bundles are not included, but most of the
-                              products in the bundle can be found on the site as
-                              individual designs. For free access to the
-                              bundles, we recommend the Personal Plan + or the
-                              Commercial Plan +</span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for <span class="bold">personal use</span>
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                          <li>
-                            Commercial use is
-                            <span class="bold">not allowed</span> <br />
-                            <span class="light-grey">
-                              for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="mbrship-card-choice-content">
+                      <ul class="ui-list ui-list__bg">
+                        <li>
+                          <span class="bold">Unlimited access</span>
+                          to thousands
+                          <span class="bold"> of single</span> designs <br />
+                          <span class="light-grey"
+                            >Bundles are not included, but most of the products
+                            in the bundle can be found on the site as individual
+                            designs. For free access to the bundles, we
+                            recommend the Personal Plan + or the Commercial Plan
+                            +</span
+                          >
+                        </li>
+                        <li>100+ new designs every week</li>
+                        <li>
+                          Products can be used to create unlimited physical
+                          products for <span class="bold">personal use</span>
+                        </li>
+                        <li>
+                          Support and assistance with downloading and using
+                        </li>
+                        <li>
+                          Commercial use is
+                          <span class="bold">not allowed</span> <br />
+                          <span class="light-grey">
+                            for commercial use, we recommend Commercial Plan or
+                            Commercial Plan +</span
+                          >
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <a href="#" class="ui-btn ui-btn__block ui-btn__green">
@@ -170,93 +136,48 @@
                       <div
                         class="ui-toggle"
                         data-type="year"
-                        data-cost="$12.99"
+                        data-cost="$89.99"
                       >
                         Annual
                       </div>
                     </div>
 
-                    <div class="ui-toggle-content">
-                      <div
-                        class="ui-toggle-content-item active mbrship-card-choice-content"
-                        data-type="month"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">Unlimited access</span> to
-                            thousands of designs <br />
+                    <div class="mbrship-card-choice-content">
+                      <ul class="ui-list ui-list__bg">
+                        <li>
+                          <span class="bold">Unlimited access</span> to
+                          thousands of designs <br />
 
-                            <span class="light-grey"
-                              >all products are ready for download,
-                              <span class="light-grey__bold"
-                                >including bundles</span
-                              ></span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>10+ new bundles every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for personal use
-                            <br />
-                            <span class="light-grey"
-                              >for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                          <li>
-                            Commercial use is
-                            <span class="bold">not allowed </span> <br />
-                            <span class="light-grey"
-                              >for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                        </ul>
-                      </div>
-                      <div
-                        class="ui-toggle-content-item mbrship-card-choice-content"
-                        data-type="year"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">Unlimited access</span> to
-                            thousands of designs <br />
-
-                            <span class="light-grey"
-                              >all products are ready for download,
-                              <span class="light-grey__bold"
-                                >including bundles</span
-                              ></span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>10+ new bundles every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for personal use
-                            <br />
-                            <span class="light-grey"
-                              >for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                          <li>
-                            Commercial use is
-                            <span class="bold">not allowed </span> <br />
-                            <span class="light-grey"
-                              >for commercial use, we recommend Commercial Plan
-                              or Commercial Plan +</span
-                            >
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                        </ul>
-                      </div>
+                          <span class="light-grey"
+                            >all products are ready for download,
+                            <span class="light-grey__bold"
+                              >including bundles</span
+                            ></span
+                          >
+                        </li>
+                        <li>100+ new designs every week</li>
+                        <li>10+ new bundles every week</li>
+                        <li>
+                          Products can be used to create unlimited physical
+                          products for personal use
+                          <br />
+                          <span class="light-grey"
+                            >for commercial use, we recommend Commercial Plan or
+                            Commercial Plan +</span
+                          >
+                        </li>
+                        <li>
+                          Commercial use is
+                          <span class="bold">not allowed </span> <br />
+                          <span class="light-grey"
+                            >for commercial use, we recommend Commercial Plan or
+                            Commercial Plan +</span
+                          >
+                        </li>
+                        <li>
+                          Support and assistance with downloading and using
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <a href="#" class="ui-btn ui-btn__block ui-btn__grey-font">
@@ -289,7 +210,7 @@
                       <div
                         class="ui-toggle"
                         data-type="year"
-                        data-cost="$16.99"
+                        data-cost="$119.99"
                       >
                         Annual
                       </div>
@@ -383,66 +304,35 @@
                       <div
                         class="ui-toggle"
                         data-type="year"
-                        data-cost="$25.99"
+                        data-cost="$199.99"
                       >
                         Annual
                       </div>
                     </div>
-                    <div class="ui-toggle-content">
-                      <div
-                        class="ui-toggle-content-item active mbrship-card-choice-content"
-                        data-type="month"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">Unlimited access</span> to
-                            thousands of designs all <br />
-                            <span class="light-grey"
-                              >products are ready for download,
-                              <span class="light-grey__bold"></span>including
-                              bundles</span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>10+ new bundles every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for personal and
-                            <span class="bold">commercial use</span> (sale of
-                            physical products)
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                        </ul>
-                      </div>
-                      <div
-                        class="ui-toggle-content-item mbrship-card-choice-content"
-                        data-type="year"
-                      >
-                        <ul class="ui-list ui-list__bg">
-                          <li>
-                            <span class="bold">Unlimited access</span> to
-                            thousands of designs all <br />
-                            <span class="light-grey"
-                              >products are ready for download,
-                              <span class="light-grey__bold"></span>including
-                              bundles</span
-                            >
-                          </li>
-                          <li>100+ new designs every week</li>
-                          <li>10+ new bundles every week</li>
-                          <li>
-                            Products can be used to create unlimited physical
-                            products for personal and
-                            <span class="bold">commercial use</span> (sale of
-                            physical products)
-                          </li>
-                          <li>
-                            Support and assistance with downloading and using
-                          </li>
-                        </ul>
-                      </div>
+
+                    <div class="mbrship-card-choice-content">
+                      <ul class="ui-list ui-list__bg">
+                        <li>
+                          <span class="bold">Unlimited access</span> to
+                          thousands of designs all <br />
+                          <span class="light-grey"
+                            >products are ready for download,
+                            <span class="light-grey__bold"></span>including
+                            bundles</span
+                          >
+                        </li>
+                        <li>100+ new designs every week</li>
+                        <li>10+ new bundles every week</li>
+                        <li>
+                          Products can be used to create unlimited physical
+                          products for personal and
+                          <span class="bold">commercial use</span> (sale of
+                          physical products)
+                        </li>
+                        <li>
+                          Support and assistance with downloading and using
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <a href="#" class="ui-btn ui-btn__block ui-btn__green">

@@ -386,7 +386,7 @@ img {
     width: 100%;
 
     &::placeholder {
-      color: #a3a4a4;
+      color: $light-grey;
     }
   }
 }
@@ -582,7 +582,7 @@ img {
     @include fz(16);
     font-weight: $weight;
     line-height: 24px;
-    color: #a3a4a4;
+    color: $light-grey;
   }
 
   &__mid {
@@ -1359,4 +1359,47 @@ span.invalid {
   display: block;
   margin-top: 2px;
   position: absolute;
+}
+
+.ui-sticky {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -khtml-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+
+  @media (max-width: 1024px) {
+    position: relative;
+  }
+
+  &-node {
+    position: relative;
+    height: 100%;
+  }
+  &-element {
+    &.float {
+      position: fixed;
+      top: 0px;
+      z-index: 99;
+
+      @media (max-width: 1024px) {
+        position: relative;
+      }
+    }
+    &.flip-bottom {
+      position: absolute;
+      z-index: 99;
+      top: auto;
+      bottom: 0;
+
+      @media (max-width: 1024px) {
+        position: relative;
+      }
+    }
+  }
 }
