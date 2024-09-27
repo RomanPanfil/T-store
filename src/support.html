@@ -16,7 +16,7 @@
               <div class="ui-sticky">
                 <nav class="account-nav ui-sticky-element">
                   <ul>
-                    <li class="active">
+                    <li>
                       <a href="#">Account Information</a>
                     </li>
                     <li><a href="#">Account Security</a></li>
@@ -25,7 +25,7 @@
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Payment Method</a></li>
                     <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Support</a></li>
+                    <li class="active"><a href="#">Support</a></li>
                     <li><a href="#">Membership</a></li>
                     <li><a href="#">Log out</a></li>
                   </ul>
@@ -161,7 +161,33 @@
                     class="chat-panel-input"
                     placeholder="Type a new message here"
                   />
-                  <button type="submit"></button>
+                  <div class="chat-panel-instruments">
+                    <div class="chat-panel-file">
+                      <label for="files" class="chat-panel-lb">
+                        <svg class="chat-panel-file-icon">
+                          <use xlink:href="svg/svg/symbols.svg#attach"></use>
+                        </svg>
+                      </label>
+                      <input
+                        class="chat-panel-file-input"
+                        id="files"
+                        type="file"
+                        multiple
+                      />
+                    </div>
+
+                    <a href="#" class="chat-panel-smiles">
+                      <svg class="chat-panel-smiles-icon">
+                        <use xlink:href="svg/svg/symbols.svg#smile"></use>
+                      </svg>
+                    </a>
+
+                    <button class="chat-panel-send" type="submit">
+                      <svg class="chat-panel-send-icon active">
+                        <use xlink:href="svg/svg/symbols.svg#chat-submit"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>

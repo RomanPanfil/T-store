@@ -491,8 +491,7 @@ img {
   }
 
   &__grey-font {
-    color: $title;
-    opacity: 0.5;
+    color: rgba(72, 73, 73, 0.5);
     background-color: #f5f5f5;
 
     &:hover {
@@ -757,6 +756,10 @@ img {
     min-width: 70px;
     background-color: #fff;
 
+    @media (max-width: 360px) {
+      height: 35px;
+    }
+
     .jq-selectbox {
       &__select {
         height: 100%;
@@ -930,6 +933,10 @@ img {
   row-gap: 8px;
   column-gap: 24px;
 
+  @media (max-width: 360px) {
+    row-gap: 20px;
+  }
+
   &-list {
     display: flex;
     gap: 10px;
@@ -961,6 +968,12 @@ img {
       border: 1px solid #e1e3e5;
       line-height: 1;
 
+      @media (max-width: 360px) {
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+      }
+
       &.active {
         background-color: $primary;
         color: #fff;
@@ -981,6 +994,12 @@ img {
       background-color: #fff;
       border: 1px solid #e1e3e5;
       transition: background-color 0.3s;
+
+      @media (max-width: 360px) {
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+      }
 
       &:not(.disabled):hover {
         background-color: $pagination_hover;
@@ -1007,6 +1026,10 @@ img {
     &-dots {
       height: 44px;
       line-height: 34px;
+
+      @media (max-width: 360px) {
+        line-height: 28px;
+      }
     }
   }
 
@@ -1018,6 +1041,10 @@ img {
 
     flex-shrink: 0;
     margin-left: auto;
+
+    @media (max-width: 360px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1096,7 +1123,7 @@ img {
     }
 
     &:hover {
-      background-color: #e1e3e5;
+      background-color: $border;
       color: $font;
     }
 
@@ -1105,6 +1132,10 @@ img {
         color: $primary;
         font-weight: 600;
         background: $bg_light;
+        height: 46px;
+        &:hover {
+          background-color: $border;
+        }
       }
     }
   }
@@ -1222,6 +1253,7 @@ img {
       line-height: 24px;
       min-height: 32px;
       padding-left: 49px;
+      margin-bottom: 12px;
 
       .bold {
         font-weight: 600;
@@ -1260,11 +1292,13 @@ img {
 .ui-toggles {
   width: 100%;
   // max-width: 400px;
+  max-height: 52px;
   background-color: $bg_light;
   border-radius: 50px;
   border-bottom: none;
   padding: 4px;
   display: flex;
+  align-items: center;
   overflow-x: auto;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -1283,6 +1317,10 @@ img {
   padding: 10px 0;
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
+  height: 44px;
+  &.additional {
+    padding: 0;
+  }
   &.active {
     background-color: #fff;
     border-radius: 50px;
@@ -1306,6 +1344,12 @@ img {
         display: none;
       }
     }
+  }
+  &-add {
+    font-weight: 600;
+    color: $secondary;
+    @include fz(14);
+    line-height: 20px;
   }
 }
 
