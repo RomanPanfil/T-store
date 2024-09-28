@@ -139,6 +139,8 @@
     padding: 24px;
     max-height: 562px;
     overflow-y: auto;
+    scroll-behavior: smooth;
+    opacity: 0;
 
     @media (max-width: 599px) {
       padding-left: 16px;
@@ -146,19 +148,18 @@
     }
 
     &::-webkit-scrollbar {
-      width: 4px;
-    }
-    &::-webkit-scrollbar-corner {
-      height: 10%;
-      background: blue;
+      width: 6px;
+      height: 6px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: $primary;
-      height: 10%;
-      transition: all 0.3s;
+      width: 6px;
+      height: 6px;
+      background-color: $border;
+      border: 3px solid $border;
+      border-radius: 6px;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: lighten($primary, 8%);
+    &::-webkit-scrollbar-thumb:hover {
+      background: lighten($border, 8%);
     }
   }
 
@@ -208,13 +209,16 @@
     display: flex;
     //align-items: center;
     padding: 24px;
-
     transition: background-color 0.3s;
 
     &:hover,
-    &:focus {
+    &:focus-within {
       background-color: $bg_light;
       box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
+
+      .chat-panel-input {
+        background-color: $bg_light;
+      }
     }
 
     &-instruments {
@@ -292,6 +296,7 @@
       outline: none;
       border: none;
       padding-right: 30px;
+      transition: background-color 0.3s;
 
       &::placeholder {
         color: $light-grey;

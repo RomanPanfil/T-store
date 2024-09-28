@@ -441,6 +441,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
+  (function () {
+    const chatMessages = document.querySelector(".chat-messages");
+
+    // Прокрутка к последнему сообщению
+    const scrollToLastMessage = () => {
+      chatMessages.style.scrollBehavior = "unset";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      chatMessages.style.scrollBehavior = "smooth";
+      chatMessages.style.opacity = 1;
+    };
+
+    scrollToLastMessage();
+  })();
+
   // (function () {
   //   const stickyContainer = $(".ui-sticky");
   //   if (stickyContainer.length > 0) {
