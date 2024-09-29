@@ -444,15 +444,17 @@ document.addEventListener("DOMContentLoaded", () => {
   (function () {
     const chatMessages = document.querySelector(".chat-messages");
 
-    // Прокрутка к последнему сообщению
-    const scrollToLastMessage = () => {
-      chatMessages.style.scrollBehavior = "unset";
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-      chatMessages.style.scrollBehavior = "smooth";
-      chatMessages.style.opacity = 1;
-    };
+    if (chatMessages) {
+      // Прокрутка к последнему сообщению
+      const scrollToLastMessage = () => {
+        chatMessages.style.scrollBehavior = "unset";
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        chatMessages.style.scrollBehavior = "smooth";
+        chatMessages.style.opacity = 1;
+      };
 
-    scrollToLastMessage();
+      scrollToLastMessage();
+    }
   })();
 
   // (function () {
@@ -517,6 +519,89 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
     );
+  })();
+
+  (function () {
+    const chatForm = $(".chat-panel");
+
+    if (chatForm.length > 0) {
+      const chatInput = $(".chat-panel-input");
+      const chatSmiles = chatForm.find(".chat-panel-smiles svg");
+      let limit = 100;
+
+      chatSmiles.click(() => {
+        document.querySelector(".emojionearea-button-open").click();
+      });
+
+      const em = $(".chat-panel-smiles-hidden").emojioneArea({});
+
+      em[0].emojioneArea.on("emojibtn.click", function (btn, event) {
+        chatInput.select();
+      });
+
+      chatForm.on("click", () => chatInput.select());
+
+      $('[name="emodji"]').on("change", function () {
+        const val = chatInput.val();
+        const emodji = document
+          .querySelector(".emojionearea-editor > img:first-of-type")
+          .getAttribute("alt");
+        chatInput.val(val + emodji);
+      });
+
+      const checkEmptyText = () => {
+        if (!chatInput.val()) chatInput.css("height", "unset");
+      };
+
+      const checkRows = () => {
+        if (window.innerWidth < 360) {
+          chatInput.attr("rows", 1);
+        } else if (window.innerWidth < 480) {
+          chatInput.attr("rows", 3);
+        } else {
+          chatInput.attr("rows", 1);
+        }
+      };
+
+      chatInput.on("input", () => checkEmptyText());
+      chatInput.on("change", () => checkEmptyText());
+
+      chatInput.autoResize({
+        onResize: function () {
+          checkEmptyText();
+        },
+        animateCallback: function () {
+          checkEmptyText();
+        },
+        limit: limit,
+      });
+
+      checkRows();
+      window.addEventListener("resize", () => checkRows());
+    }
+  })();
+
+  (function () {
+    const showPopup = (url) => {
+      $.magnificPopup.open({
+        delegate: "a",
+        removalDelay: 500,
+        items: {
+          src: `popups/${url}.html`,
+        },
+        type: "ajax",
+        overflowY: "scroll",
+        mainClass: "mfp-fade",
+        ajax: {
+          tError: "Error. Not valid url",
+        },
+      });
+    };
+
+    $("[data-modal]").click(function (e) {
+      e.preventDefault();
+      showPopup($(this).data("modal"));
+    });
   })();
 
   $.validator.addMethod(

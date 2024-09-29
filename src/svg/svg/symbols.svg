@@ -40,6 +40,10 @@
 			<path d="M18 6L6 18M6 6l12 12" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 		</symbol>
 	
+		<symbol id="close-modal" viewBox="0 0 40 40">
+			<path d="M30 10L10 30M10 10l20 20" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</symbol>
+	
 		<symbol id="download" viewBox="0 0 16 16">
 			<path d="M14 10v2.667A1.334 1.334 0 0 1 12.667 14H3.333A1.334 1.334 0 0 1 2 12.667V10M4.666 6.667L7.999 10l3.334-3.333M8 10V2"></path>
 		</symbol>

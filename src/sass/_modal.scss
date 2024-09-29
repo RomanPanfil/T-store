@@ -1,0 +1,82 @@
+.modal {
+  position: relative;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: all 0.2s;
+
+  max-width: 985px;
+
+  @media (max-width: 1280px) {
+    max-width: 90%;
+  }
+  @media (max-width: 599px) {
+    padding: 24px 16px;
+    border-radius: 5px;
+  }
+
+  .mfp-close {
+    position: absolute;
+    right: 45px;
+    top: 45px;
+    color: transparent;
+    background-image: url(/public/images/svg/close-modal.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s;
+
+    @media (max-width: 599px) {
+      right: 26px;
+      top: 34px;
+      width: 12px;
+      height: 12px;
+      background-size: 40px;
+    }
+  }
+  &-title {
+    @include fz(24);
+    line-height: 1.33;
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  &-review {
+  }
+}
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

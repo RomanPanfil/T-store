@@ -410,7 +410,7 @@ img {
   padding-left: 24px;
   padding-right: 24px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -463,6 +463,16 @@ img {
 
     &:hover {
       background-color: $btn_orange_hover;
+    }
+  }
+
+  &__invert {
+    color: $btn_green;
+    background-color: #fff;
+
+    &:hover {
+      background-color: $border;
+      color: $font;
     }
   }
 
@@ -1133,6 +1143,7 @@ img {
         font-weight: 600;
         background: $bg_light;
         height: 46px;
+        line-height: 46px;
         &:hover {
           background-color: $border;
         }

@@ -1,0 +1,148 @@
+<div class="modal modal-review mfp-with-anim">
+  <div class="modal-title">Edit review</div>
+  <form class="modal-content">
+    <div class="reviews-card">
+      <div class="reviews-card-contents">
+        <img
+          src="./images/examples/rev_profile.png"
+          alt="User photo"
+          class="reviews-card-photo-user"
+        />
+        <div class="reviews-card-content">
+          <div class="reviews-card-info">Michael on Feb 23, 2024</div>
+          <div class="reviews-form-content">
+            <div class="reviews-form-stars" data-controller="stars">
+              <label class="products-card-rating-lb active" for="star-1-1">
+                <input
+                  name="stars"
+                  value="1"
+                  type="radio"
+                  class="products-card-rating-choice"
+                  disabled=""
+                  id="star-1-1"
+                />
+                <svg class="products-card-rating-icon">
+                  <use xlink:href="svg/svg/symbols.svg#star-rating"></use>
+                </svg>
+              </label>
+              <label class="products-card-rating-lb active" for="star-2-2">
+                <input
+                  name="stars"
+                  value="2"
+                  type="radio"
+                  class="products-card-rating-choice"
+                  disabled=""
+                  id="star-2-2"
+                />
+                <svg class="products-card-rating-icon">
+                  <use xlink:href="svg/svg/symbols.svg#star-rating"></use>
+                </svg>
+              </label>
+              <label class="products-card-rating-lb" for="star-3-3">
+                <input
+                  name="stars"
+                  value="3"
+                  type="radio"
+                  class="products-card-rating-choice"
+                  disabled=""
+                  id="star-3-3"
+                />
+                <svg class="products-card-rating-icon">
+                  <use xlink:href="svg/svg/symbols.svg#star-rating"></use>
+                </svg>
+              </label>
+              <label class="products-card-rating-lb" for="star-4-4">
+                <input
+                  name="stars"
+                  value="4"
+                  type="radio"
+                  class="products-card-rating-choice"
+                  disabled=""
+                  checked=""
+                  id="star-4-4"
+                />
+                <svg class="products-card-rating-icon">
+                  <use xlink:href="svg/svg/symbols.svg#star-rating"></use>
+                </svg>
+              </label>
+              <label class="products-card-rating-lb" for="star-5-5">
+                <input
+                  name="stars"
+                  value="5"
+                  type="radio"
+                  class="products-card-rating-choice"
+                  disabled=""
+                  id="star-5-5"
+                />
+                <svg class="products-card-rating-icon">
+                  <use xlink:href="svg/svg/symbols.svg#star-rating"></use>
+                </svg>
+              </label>
+            </div>
+            <textarea
+              class="reviews-form-textarea"
+              placeholder="Very cute. The lines are thick enough to hold the shape after cutting!"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-form-btn">
+      <button class="reviews-form-cancel-btn ui-btn ui-btn__invert ui-btn__200">
+        Cancel
+      </button>
+      <button class="reviews-form-add-btn ui-btn ui-btn__green ui-btn__200">
+        Save
+      </button>
+    </div>
+  </form>
+  <script>
+    {
+      const f = document.querySelector('[data-controller="stars"]');
+      const labels = f.querySelectorAll("label");
+      const inChecked = f.querySelector("input:checked");
+
+      if (inChecked) {
+        for (let i = 1; i <= inChecked.value; i++) {
+          labels[i - 1].classList.add("active");
+        }
+      }
+
+      labels.forEach((label) => {
+        label.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const input = label.querySelector("input");
+          input.checked = true;
+
+          for (let i = 1; i <= 5; i++) {
+            if (i <= input.value) labels[i - 1].classList.add("active");
+            else labels[i - 1].classList.remove("active");
+          }
+        });
+
+        label.addEventListener("mouseover", function (e) {
+          const current = label.querySelector("input").value;
+          for (let i = 1; i <= current; i++) {
+            labels[i - 1].classList.add("active");
+          }
+        });
+
+        label.addEventListener("mouseout", function (e) {
+          const inputChecked = f.querySelector("input:checked");
+          const checked = inputChecked ? inputChecked.value : 0;
+          const current = label.querySelector("input").value;
+          for (let i = 1; i <= current; i++) {
+            if (i > checked) labels[i - 1].classList.remove("active");
+          }
+        });
+      });
+
+      document
+        .querySelector(".reviews-form-cancel-btn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          $.magnificPopup.instance.close();
+        });
+    }
+  </script>
+</div>

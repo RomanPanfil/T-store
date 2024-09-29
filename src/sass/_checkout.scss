@@ -70,53 +70,10 @@
     }
   }
 
-  .payment-method {
-    background-color: #fff;
-    border: 1px solid $border;
-    border-radius: 10px;
-    padding: 30px 30px 0;
-    margin-bottom: 24px;
-
-    &:hover {
-      .checkout-edit-icons {
-        opacity: 0.5;
-      }
-    }
-
-    @media (max-width: 599px) {
-      padding: 16px 16px 0px;
-    }
-
-    &-title {
-      @include fz(32);
-      font-weight: 600;
-      color: $title;
-
-      @media (max-width: 370px) {
-        @include fz(24);
-      }
-      @media (max-width: 420px) {
-        line-height: 1.31;
-      }
-    }
-
-    &-header {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 22px;
-      justify-content: space-between;
-      gap: 20px;
-
-      @media (max-width: 768px) {
-        align-items: baseline;
-      }
-    }
-  }
-
   .shopping-cart {
     &:hover {
       .checkout-edit-icons {
-        opacity: 0.5;
+        opacity: 1;
       }
     }
     &-name {
@@ -155,37 +112,79 @@
       }
     }
   }
+}
 
-  .payment {
-    &-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      @include fz(16);
+.payment {
+  &-method {
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: 30px 30px 0;
+    margin-bottom: 24px;
+
+    &:hover {
+      .checkout-edit-icons {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 599px) {
+      padding: 16px 16px 0px;
+    }
+
+    &-title {
+      @include fz(32);
       font-weight: 600;
-      line-height: 24px;
       color: $title;
+
+      @media (max-width: 370px) {
+        @include fz(24);
+      }
+      @media (max-width: 420px) {
+        line-height: 1.31;
+      }
+    }
+
+    &-header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 22px;
+      justify-content: space-between;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        align-items: baseline;
+      }
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include fz(16);
+    font-weight: 600;
+    line-height: 24px;
+    color: $title;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    &-input {
+      width: 20px;
+      height: 20px;
+      accent-color: $title;
       cursor: pointer;
-
-      &:not(:last-of-type) {
-        margin-bottom: 10px;
-      }
-
-      &-input {
-        width: 20px;
-        height: 20px;
-        accent-color: $title;
-        cursor: pointer;
-      }
-
-      &-pic {
-        width: 16px;
-        height: 20px;
-      }
     }
 
-    &-items {
-      margin-bottom: 30px;
+    &-pic {
+      width: 16px;
+      height: 20px;
     }
+  }
+
+  &-items {
+    margin-bottom: 30px;
   }
 }
