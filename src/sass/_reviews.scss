@@ -20,6 +20,8 @@
       border: 1px solid $border;
       border-radius: 8px;
       outline: none;
+      color: #484949;
+
       &::placeholder {
         color: $light-grey;
       }

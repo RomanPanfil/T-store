@@ -600,6 +600,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     $("[data-modal]").click(function (e) {
       e.preventDefault();
+      element = $(this);
       showPopup($(this).data("modal"));
     });
   })();
