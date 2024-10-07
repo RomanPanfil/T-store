@@ -375,6 +375,13 @@
         @media (max-width: 599px) {
           margin-top: 24px;
         }
+
+        &-amount {
+          @media (max-width: 1024px) {
+            width: 20%;
+          }
+        }
+
         &-star {
           width: 55px;
         }
