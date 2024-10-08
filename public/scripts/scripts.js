@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
         prevEl: ".plan-products .slider-arrow__prev",
       },
       breakpoints: {
-        599: {
+        480: {
           slidesPerView: 2,
           spaceBetween: 20,
           autoplay: false,

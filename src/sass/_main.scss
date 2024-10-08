@@ -334,7 +334,7 @@
     display: block;
     width: 200px;
 
-    @media (max-width: 599px) {
+    @media (max-width: 480px) {
       margin-bottom: 12px;
     }
   }
@@ -358,7 +358,7 @@
   &-card {
     margin-bottom: 24px;
     height: calc(100% - 24px);
-    cursor: pointer;
+    cursor: $pointer;
 
     &:hover {
       .products-card-image img {
@@ -425,9 +425,20 @@
       width: 48px;
       height: 48px;
       flex: 0 0 48px;
-      background-color: #f0f2f3;
+      // background-color: #f0f2f3;
+      background-color: #fff;
       border-radius: 8px;
       transition: opacity 0.3s;
+      box-shadow: 0px 0px 10px 0px #0000001a;
+
+      @media (min-width: 480px) and (max-width: 599px) {
+        height: 35px;
+        width: 35px;
+      }
+
+      @media (max-width: 1024px) {
+        opacity: 1;
+      }
 
       &:hover {
         .products-card-like-icon {
@@ -454,6 +465,10 @@
         width: 24px;
         height: 24px;
         transition: stroke 0.3s, fill 0.3s;
+        @media (min-width: 480px) and (max-width: 599px) {
+          height: 18px;
+          width: 18px;
+        }
       }
     }
 
@@ -476,7 +491,8 @@
       width: 48px;
       height: 48px;
       flex: 0 0 48px;
-      background-color: #f0f2f3;
+      background-color: #fff;
+      border: 1px solid $border;
       border-radius: 8px;
       transition: background-color 0.3s;
 
@@ -520,6 +536,10 @@
       line-height: 24px;
       margin-bottom: 10px;
       opacity: 0.5;
+      // @media (min-width: 480px) and (max-width: 599px) {
+      //   font-size: 14px;
+      //   margin-bottom: 5px;
+      // }
     }
 
     //stars start
@@ -540,7 +560,7 @@
       }
       &-lb {
         margin: 0;
-        cursor: pointer;
+        cursor: $pointer;
 
         &.active svg {
           fill: $secondary;
@@ -590,6 +610,13 @@
       position: relative;
       align-items: center;
       padding: 10px 20px;
+
+      @media (min-width: 480px) and (max-width: 599px) {
+        gap: 5px;
+        padding: 10px 5px 10px 5px;
+        align-items: normal;
+      }
+
       &:hover {
         .products-card-reciept-txt {
           color: $secondary;
@@ -604,10 +631,17 @@
         line-height: 20px;
         color: $title;
         transition: color 0.3s;
+        @media (min-width: 480px) and (max-width: 576px) {
+          @include fz(12);
+        }
       }
       &-dwl {
         height: 16px;
         width: 16px;
+        @media (min-width: 480px) and (max-width: 576px) {
+          height: 14px;
+          width: 14px;
+        }
       }
       &-icon {
         width: 100%;
@@ -636,7 +670,7 @@
     display: block;
     position: relative;
     margin-bottom: 32px;
-    height: 100%;
+    height: calc(100% - 32px);
 
     &:hover {
       .category-card-image {
@@ -665,9 +699,9 @@
         object-fit: cover;
         transition: transform 0.5s;
 
-        @media (max-width: 599px) {
-          aspect-ratio: 1.2;
-        }
+        // @media (max-width: 599px) {
+        //   aspect-ratio: 1.2;
+        // }
       }
     }
 
@@ -675,6 +709,11 @@
       @include fz(24);
       font-weight: 600;
       margin-bottom: 16px;
+      word-wrap: break-word;
+
+      @media (min-width: 480px) and (max-width: 599px) {
+        @include fz(18);
+      }
     }
   }
 }

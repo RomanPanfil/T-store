@@ -165,7 +165,8 @@
     font-weight: 600;
     line-height: 24px;
     color: $title;
-    cursor: pointer;
+    width: fit-content;
+    cursor: $pointer;
 
     &:not(:last-of-type) {
       margin-bottom: 10px;
@@ -175,7 +176,7 @@
       width: 20px;
       height: 20px;
       accent-color: $title;
-      cursor: pointer;
+      cursor: $pointer;
     }
 
     &-pic {

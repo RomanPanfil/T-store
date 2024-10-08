@@ -46,6 +46,7 @@ $breakpoints: (
   "md": 1024,
   "sm": 769,
   "xs": 599,
+  "xxs": 480,
   "us": 320,
 );
 
@@ -85,3 +86,5 @@ $block_heading_font_weight: 600;
   letter-spacing: $lsp + px;
   letter-spacing: $lsp/16 + rem;
 }
+
+$pointer: url(../images/svg/cursor.svg), pointer;

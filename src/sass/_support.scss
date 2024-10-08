@@ -16,7 +16,6 @@
     width: 24px;
     height: 24px;
     margin-top: 18px;
-    cursor: pointer;
     &-icon {
       width: 100%;
       height: 100%;
@@ -240,7 +239,7 @@
     display: flex;
     //align-items: center;
     padding: 24px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 
     @media (max-width: 599px) {
       padding: 16px;
@@ -251,12 +250,9 @@
 
     &:hover,
     &:focus-within {
-      background-color: $bg_light;
+      //background-color: $bg_light;
+      border: 1px solid rgba(72, 73, 73, 0.6);
       box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
-
-      .chat-panel-input {
-        background-color: $bg_light;
-      }
     }
 
     &-instruments {
@@ -288,7 +284,7 @@
         stroke-width: 2px;
         stroke: $title;
         transition: stroke 0.3s;
-        cursor: pointer;
+        cursor: $pointer;
         &:hover,
         &.active {
           stroke: $primary;
@@ -306,7 +302,7 @@
         stroke-width: 2px;
         stroke: $title;
         transition: stroke 0.3s;
-        cursor: pointer;
+        cursor: $pointer;
         &:hover,
         &.active {
           stroke: $primary;
@@ -363,7 +359,7 @@
         stroke-width: 2px;
         stroke: $title;
         transition: stroke 0.3s;
-        cursor: pointer;
+        cursor: $pointer;
 
         &:hover,
         &.active {

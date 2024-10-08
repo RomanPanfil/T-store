@@ -41,6 +41,11 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+a,
+[data-href] {
+  cursor: $pointer;
+}
+
 @import "ui";
 
 @import "grid";

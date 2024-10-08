@@ -316,6 +316,14 @@ img {
   width: 100%;
   border: 1px solid $border;
   height: 48px;
+  transition: border 0.3s;
+
+  &:hover,
+  &:focus-within {
+    //background-color: $bg_light;
+    border: 1px solid rgba(72, 73, 73, 0.6);
+    box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
+  }
 
   .iti {
     display: flex;
@@ -409,7 +417,7 @@ img {
   font-weight: 600;
   padding-left: 24px;
   padding-right: 24px;
-  cursor: pointer;
+  cursor: $pointer;
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   align-items: center;
@@ -579,11 +587,12 @@ img {
   padding-right: 14px;
   height: 48px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border 0.3s;
 
   &:hover,
   &:focus {
-    background-color: $bg_light;
+    //background-color: $bg_light;
+    border: 1px solid rgba(72, 73, 73, 0.6);
     box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
   }
 
@@ -606,12 +615,20 @@ img {
   padding: 10px 14px;
   height: 154px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: border 0.3s;
   resize: none;
+
+  &::placeholder {
+    @include fz(16);
+    font-weight: $weight;
+    line-height: 24px;
+    color: $light-grey;
+  }
 
   &:hover,
   &:focus {
-    background-color: $bg_light;
+    //background-color: $bg_light;
+    border: 1px solid rgba(72, 73, 73, 0.6);
     box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
   }
 }
@@ -650,7 +667,7 @@ img {
     border: none;
     background-color: transparent;
     outline: none;
-    cursor: pointer;
+    cursor: $pointer;
   }
   &-icon {
     width: 22px;
@@ -664,7 +681,14 @@ img {
   position: relative;
   color: $font;
   height: 100%;
-  cursor: pointer;
+  cursor: $pointer;
+  transition: all 0.3s;
+  &:hover,
+  &:focus-within {
+    //background-color: $bg_light;
+    border: 1px solid rgba(72, 73, 73, 0.6);
+    box-shadow: 0px 10px 25px rgba(22, 25, 50, 0.07);
+  }
 
   &__bordered {
     border: 1px solid $border;
@@ -884,7 +908,7 @@ img {
   border: 1px solid $border;
   border-radius: 2px;
   transition: background-color 0.3s, border-color 0.3s;
-  cursor: pointer;
+  cursor: $pointer;
   font-weight: 400;
   @include fz(16);
   margin-right: 8px;
@@ -1211,7 +1235,7 @@ img {
 .ui-tab {
   padding: 8px;
   color: $title;
-  cursor: pointer;
+  cursor: $pointer;
   transition: font-weight 0.3s, padding 0.3s;
   white-space: nowrap;
 
@@ -1345,7 +1369,7 @@ img {
     text-align: center;
     font-weight: 600;
   }
-  cursor: pointer;
+  cursor: $pointer;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
 
@@ -1385,7 +1409,7 @@ img {
     justify-content: center;
     background-color: #fff;
     transition: background-color 0.3s;
-    cursor: pointer;
+    cursor: $pointer;
 
     &:not(.swiper-button-disabled):hover {
       background-color: $primary;

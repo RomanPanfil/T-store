@@ -37,7 +37,7 @@
       display: flex;
       margin-bottom: 30px;
       justify-content: space-between;
-      cursor: pointer;
+      cursor: $pointer;
 
       &.block {
         cursor: default;
@@ -46,7 +46,6 @@
       &-wrapper {
         display: flex;
         flex: 1;
-        cursor: pointer;
       }
 
       &__all {
