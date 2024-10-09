@@ -436,6 +436,11 @@
         width: 35px;
       }
 
+      @media (min-width: 768px) and (max-width: 1140px) {
+        height: 40px;
+        width: 40px;
+      }
+
       @media (max-width: 1024px) {
         opacity: 1;
       }
@@ -465,6 +470,10 @@
         width: 24px;
         height: 24px;
         transition: stroke 0.3s, fill 0.3s;
+        @media (min-width: 768px) and (max-width: 1140px) {
+          height: 20px;
+          width: 20px;
+        }
         @media (min-width: 480px) and (max-width: 599px) {
           height: 18px;
           width: 18px;
@@ -610,6 +619,13 @@
       position: relative;
       align-items: center;
       padding: 10px 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (max-width: 1140px) {
+        padding-left: 0;
+        padding-right: 5px;
+      }
 
       @media (min-width: 480px) and (max-width: 599px) {
         gap: 5px;
@@ -631,6 +647,11 @@
         line-height: 20px;
         color: $title;
         transition: color 0.3s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-grow: 1;
+
         @media (min-width: 480px) and (max-width: 576px) {
           @include fz(12);
         }
@@ -638,6 +659,7 @@
       &-dwl {
         height: 16px;
         width: 16px;
+        flex-shrink: 0;
         @media (min-width: 480px) and (max-width: 576px) {
           height: 14px;
           width: 14px;
@@ -710,6 +732,10 @@
       font-weight: 600;
       margin-bottom: 16px;
       word-wrap: break-word;
+
+      @media (min-width: 768px) and (max-width: 960px) {
+        @include fz(20);
+      }
 
       @media (min-width: 480px) and (max-width: 599px) {
         @include fz(18);

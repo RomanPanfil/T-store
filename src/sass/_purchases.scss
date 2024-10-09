@@ -1,6 +1,13 @@
 .purchase {
   &-cards-wrapper {
     margin-bottom: 18px;
+
+    .links-item {
+      @media (min-width: 480px) and (max-width: 576px) {
+        height: 35px;
+        line-height: 35px;
+      }
+    }
   }
 
   &-filter {

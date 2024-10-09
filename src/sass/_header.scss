@@ -380,6 +380,10 @@
       }
       .ui-select {
         min-width: 200px;
+        &:hover,
+        &:focus-within {
+          border: none;
+        }
 
         @media (max-width: 1140px) {
           min-width: unset;
