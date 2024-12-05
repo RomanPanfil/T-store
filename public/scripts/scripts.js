@@ -605,6 +605,65 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
+  // // Универсальный аккордеон
+  // (function() {
+  //   const accordions = document.querySelectorAll('.accordion');
+
+  //   accordions.forEach(accordion => {
+  //     const accordionHeaders = accordion.querySelectorAll('.accordion-header');
+
+  //     accordionHeaders.forEach(header => {
+  //       header.addEventListener('click', () => {        
+  //         accordionHeaders.forEach(h => {
+  //             if (h !== header) {
+  //                 h.classList.remove('active');
+  //             }
+  //         });
+       
+  //         header.classList.toggle('active');
+  //       });
+  //     });
+  //   });
+  // })();
+
+ 
+    // Универсальный аккордеон
+  (function() {
+    const accordions = document.querySelectorAll('.accordion');
+
+    accordions.forEach(accordion => {
+      const accordionHeaders = accordion.querySelectorAll('.accordion-header');
+
+      accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          accordionHeaders.forEach(h => {
+            if (h !== header) {
+              h.classList.remove('active');
+            }
+          });         
+      
+          header.classList.toggle('active');
+
+          // Небольшая задержка для завершения анимации
+          setTimeout(() => {
+            const accordionItem = header.closest('.accordion-item');                  
+
+            // Получаем координаты элемента
+            const rect = accordionItem.getBoundingClientRect();
+
+            // Проверяем, виден ли элемент полностью
+            if (rect.top < 0 || rect.bottom > window.innerHeight) {
+              window.scrollTo({
+                top: accordionItem.getBoundingClientRect().top + window.pageYOffset,
+                behavior: 'smooth'
+              });
+            }
+          }, 300); // время должно совпадать с длительностью transition в CSS
+        });
+      });
+    });
+  })();
+
   $.validator.addMethod(
     "noDigits",
     function (value, element) {
