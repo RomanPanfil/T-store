@@ -664,6 +664,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })();
 
+  // загрузка фото профиля
+  (function() {    
+    function handleAvatarUpload(event) {      
+      const fileInput = document.getElementById('avatarInput');
+      const avatarPreview = document.getElementById('avatarPreview');
+
+      if(!fileInput || !avatarPreview) return;
+
+      const file = fileInput.files[0];
+     
+      if (!file) {
+        console.error('Файл не выбран');
+        return;
+      }
+
+      // Создаем превью изображения
+      const reader = new FileReader();
+      reader.onload = (e) => {
+          avatarPreview.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+
+      // Создаем объект FormData для отправки на бэкенд
+      const formData = new FormData();
+      formData.append('avatar', file);      
+      
+      console.log(formData.get('avatar')); // Получить значение по ключу      
+    }
+    
+    document.getElementById('uploadButton').addEventListener('click', () => {
+      document.getElementById('avatarInput').click();
+    });
+ 
+    document.getElementById('avatarInput').addEventListener('change', handleAvatarUpload);
+  })();
+
   $.validator.addMethod(
     "noDigits",
     function (value, element) {
