@@ -1,0 +1,148 @@
+<div class="modal modal-auth modal-auth__login mfp-with-anim">
+  <div class="auth-wrapper">
+    <div class="auth-main">
+      <div class="auth-main-title">
+        Login
+      </div>
+      <form class="auth-main-form">
+        <div class="ui-field">
+          <input
+            type="text"
+            class="ui-input"
+            name="email"
+            id="email"
+            placeholder="Email"
+          >
+        </div>
+        <div class="ui-field">
+          <input
+            type="password"
+            class="ui-input"
+            id="password"
+            name="password"
+            minlength="8"
+            placeholder="Password"
+          >
+          <button type="button" class="password-toggle">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g class="eye-off">
+                <path
+                  d="M17.4 17.1975C15.846 18.3376 13.9537 18.9693 12 19C5.63636 19 2 12 2 12C3.13081 9.97167 4.69921 8.19955 6.6 6.80252M10.0909 5.21002C10.7167 5.06904 11.3573 4.99857 12 5.00002C18.3636 5.00002 22 12 22 12C21.4482 12.9937 20.7901 13.9292 20.0364 14.7913M13.9273 13.855C13.6776 14.1129 13.3765 14.3198 13.042 14.4632C12.7074 14.6067 12.3463 14.6839 11.9801 14.6901C11.6139 14.6963 11.2501 14.6315 10.9106 14.4994C10.571 14.3674 10.2625 14.1709 10.0035 13.9216C9.74452 13.6724 9.54036 13.3755 9.40319 13.0486C9.26602 12.7217 9.19866 12.3716 9.20512 12.0192C9.21158 11.6667 9.29174 11.3191 9.4408 10.9971C9.58986 10.6751 9.80478 10.3853 10.0727 10.145"
+                  stroke="#A3A4A4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2 2L22 22"
+                  stroke="#A3A4A4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <g class="eye">
+                <path
+                  d="M2 12C2 12 5.63636 5 12 5C18.3636 5 22 12 22 12C22 12 18.3636 19 12 19C5.63636 19 2 12 2 12Z"
+                  stroke="#A3A4A4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                  stroke="#A3A4A4"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="auth-main-remember">
+          <label class="subtotal-agree">
+            <input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              class="ui-checkbox"
+            >
+            <span class="auth-main-remember-text">
+              Remember me
+            </span>
+          </label>
+          <a href="#" class="auth-main-forgot">
+            Forgot password
+          </a>
+        </div>
+        <button type="submit" class="ui-btn ui-btn__green ui-btn__block">Login</button>
+      </form>
+    </div>
+    <div class="auth-switch">
+      <div class="auth-switch-title">
+        Hello, Friend!
+      </div>
+      <div class="auth-switch-text">
+        Don't have an account?
+        <br>
+        Sign up and discover a great amount of new opportunities
+      </div>
+      <a href="#" class="ui-btn ui-btn__transparent auth-switch-btn">Register</a>
+    </div>
+  </div>
+  <script>    
+    $(document).ready(function () {
+      // показывать/скрывать пароль
+      (function() {
+        document.querySelectorAll('.password-toggle').forEach(button => {
+          button.addEventListener('click', () => {
+            const input = button.previousElementSibling;
+
+            if(!input) return
+            
+            if (input.type === 'password') {
+              input.type = 'text';
+              button.classList.add('show');
+            } else {
+              input.type = 'password';
+              button.classList.remove('show');
+            }
+          });
+        });
+      })();
+
+      // валидация
+      $(".auth-main-form").on("submit", function (e) {
+        if (!$(".auth-main-form").valid()) e.preventDefault();
+      });
+      $(".auth-main-form").validate({
+        errorElement: "span",
+        errorClass: "invalid",
+
+        rules: {
+          "email": {
+            required: true,
+            email: true,
+          },
+          password: {
+            required: true,
+            minlength: 8,
+            maxlength: 16,
+          },
+        },
+        errorPlacement: function (error, element) {
+          if (element.hasClass("ui-input")) {
+            element.closest(".ui-field").append(error);
+          }
+        },
+      });
+    });
+  </script>
+</div>

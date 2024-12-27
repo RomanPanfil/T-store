@@ -959,6 +959,13 @@ img {
 .ui-btn__translucent:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
+.ui-btn__transparent {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.ui-btn__transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .ui-btn__bordered {
   border: 1px solid #e1e3e5;
   background-color: transparent;
@@ -8362,6 +8369,31 @@ span.invalid {
   margin-bottom: 28px;
   font-weight: 600;
 }
+.modal-auth {
+  padding: 0;
+  max-width: 872px;
+  overflow: hidden;
+}
+.modal-auth__login .mfp-close {
+  right: 24px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.modal-auth__create .mfp-close {
+  right: 24px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18" stroke="%23383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="%23383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+@media (max-width: 1280px) {
+  .modal-auth {
+    max-width: 90%;
+  }
+}
+
 .mfp-fade.mfp-bg {
   opacity: 0;
   -webkit-transition: all 0.15s ease-out;
@@ -8395,5 +8427,186 @@ span.invalid {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+
+.auth-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  max-height: 90vh;
+  min-height: 56vh;
+  overflow-y: auto;
+}
+.auth-wrapper .ui-field {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .auth-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.auth-main {
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 992px) {
+  .auth-main {
+    padding: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .auth-main {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+@media (max-width: 599px) {
+  .auth-main {
+    padding: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .auth-main {
+    padding: 16px;
+  }
+}
+.auth-main-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center;
+  color: #484949;
+  margin-bottom: 24px;
+}
+.auth-main-remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+@media (max-width: 599px) {
+  .auth-main-remember {
+    gap: 12px;
+  }
+}
+.auth-main-remember-text {
+  font-size: 16px;
+  color: #a3a4a4;
+}
+.auth-main-forgot {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #70b12f;
+}
+.auth-switch {
+  color: #FFFFFF;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background-image: url(../images/login-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+}
+@media (max-width: 992px) {
+  .auth-switch {
+    padding: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .auth-switch {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+@media (max-width: 599px) {
+  .auth-switch {
+    padding: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .auth-switch {
+    padding: 16px;
+  }
+}
+.auth-switch-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.auth-switch-text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.auth-switch-btn {
+  width: min(240px, 100%);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.password-toggle .eye {
+  display: none;
+}
+.password-toggle.show .eye {
+  display: block;
+}
+.password-toggle.show .eye-off {
+  display: none;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

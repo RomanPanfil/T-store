@@ -4,7 +4,7 @@
     <div class="page-wrapper">
       <ul class="breadcrumbs">
         <li>
-          <a href="#"> Home </a>
+          <a href="#"> Home</a>
         </li>
         <li>My Account</li>
       </ul>
@@ -19,15 +19,33 @@
                     <li class="active">
                       <a href="#">Account Information</a>
                     </li>
-                    <li><a href="#">Account Security</a></li>
-                    <li><a href="#">Email Settings</a></li>
-                    <li><a href="#">Purchases</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Payment Method</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Membership</a></li>
-                    <li><a href="#">Log out</a></li>
+                    <li>
+                      <a href="#">Account Security</a>
+                    </li>
+                    <li>
+                      <a href="#">Email Settings</a>
+                    </li>
+                    <li>
+                      <a href="#">Purchases</a>
+                    </li>
+                    <li>
+                      <a href="#">Reviews</a>
+                    </li>
+                    <li>
+                      <a href="#">Payment Method</a>
+                    </li>
+                    <li>
+                      <a href="#">Favorites</a>
+                    </li>
+                    <li>
+                      <a href="#">Support</a>
+                    </li>
+                    <li>
+                      <a href="#">Membership</a>
+                    </li>
+                    <li>
+                      <a href="#">Log out</a>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -39,15 +57,23 @@
                 src="./images/profile.png"
                 alt="User photo"
                 class="account-photo-user"
-              />
-              <button class="ui-btn ui-btn__green">Click to upload</button>
+                id="avatarPreview"
+              >
+              <input
+                type="file"
+                id="avatarInput"
+                accept="image/*"
+                style="display: none;"
+              >
+              <button class="ui-btn ui-btn__green" id="uploadButton">Click to upload</button>
             </div>
             <form class="form-auth-edit">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="emailAdress"
-                      >Email Address</label
+                    <label class="ui-field-name" for="emailAdress">
+                      Email Address
+                    </label
                     >
                     <input
                       type="email"
@@ -55,13 +81,14 @@
                       name="email-address"
                       id="emailAdress"
                       placeholder="Ivanov@gmail.com"
-                    />
+                    >
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="password"
-                      >Enter Password</label
+                    <label class="ui-field-name" for="password">
+                      Enter Password
+                    </label
                     >
                     <input
                       type="password"
@@ -69,7 +96,7 @@
                       id="password"
                       name="password"
                       minlength="8"
-                    />
+                    >
                   </div>
                 </div>
               </div>
@@ -77,13 +104,13 @@
                 Update Details
               </button>
             </form>
-
             <form class="form-update">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="firstName"
-                      >First Name</label
+                    <label class="ui-field-name" for="firstName">
+                      First Name
+                    </label
                     >
                     <input
                       type="text"
@@ -91,13 +118,14 @@
                       name="first-name"
                       id="firstName"
                       placeholder="Ivan"
-                    />
+                    >
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="lastName"
-                      >Last Name</label
+                    <label class="ui-field-name" for="lastName">
+                      Last Name
+                    </label
                     >
                     <input
                       type="text"
@@ -105,13 +133,14 @@
                       name="last-name"
                       id="lastName"
                       placeholder="Ivanov"
-                    />
+                    >
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="phoneNumber"
-                      >Phone Number</label
+                    <label class="ui-field-name" for="phoneNumber">
+                      Phone Number
+                    </label
                     >
                     <div class="ui-tel-group">
                       <input
@@ -120,29 +149,24 @@
                         name="number"
                         id="phoneNumber"
                         required
-                      />
+                      >
                     </div>
                   </div>
                 </div>
-
                 <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="country">Country</label>
-                    <select
-                      class="ui-select ui-select__simple"
-                      name="country"
-                      id="country"
-                    >
+                    <select class="ui-select ui-select__simple" name="country" id="country">
                       <option value="1">Belarus</option>
                       <option value="2">Poland</option>
                     </select>
                   </div>
                 </div>
-
                 <div class="col-sm-6">
                   <div class="ui-field">
-                    <label class="ui-field-name" for="postcode"
-                      >Zip Code / Postcode</label
+                    <label class="ui-field-name" for="postcode">
+                      Zip Code / Postcode
+                    </label
                     >
                     <input
                       type="text"
@@ -151,18 +175,13 @@
                       id="postcode"
                       placeholder="000000"
                       maxlength="6"
-                    />
+                    >
                   </div>
                 </div>
-
                 <div class="col-sm-6">
                   <div class="ui-field">
                     <label class="ui-field-name" for="language">Language</label>
-                    <select
-                      class="ui-select ui-select__simple"
-                      id="language"
-                      name="language"
-                    >
+                    <select class="ui-select ui-select__simple" id="language" name="language">
                       <option value="1">English</option>
                       <option value="2">Polish</option>
                     </select>
@@ -173,7 +192,6 @@
                 Update Details
               </button>
             </form>
-
             <script>
               document.addEventListener("DOMContentLoaded", (event) => {
                 $(document).ready(function () {

@@ -693,6 +693,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(formData.get('avatar')); // Получить значение по ключу      
     }
     
+    if(!document.getElementById('uploadButton')) return;
     document.getElementById('uploadButton').addEventListener('click', () => {
       document.getElementById('avatarInput').click();
     });

@@ -1,0 +1,56 @@
+<div class="modal modal-auth modal-auth__login mfp-with-anim">
+  <div class="auth-wrapper">
+    <div class="auth-main">
+      <div class="auth-main-title">
+        Login
+      </div>
+      <form class="auth-main-form">
+        <div class="ui-field">
+          <input
+            type="text"
+            class="ui-input"
+            name="email"
+            id="email"
+            placeholder="Email"
+          >
+        </div>
+        <button type="submit" class="ui-btn ui-btn__green ui-btn__block">Forgot</button>
+      </form>
+    </div>
+    <div class="auth-switch">
+      <div class="auth-switch-title">
+        Hello, Friend!
+      </div>
+      <div class="auth-switch-text">
+        Don't have an account?
+        <br>
+        Sign up and discover a great amount of new opportunities
+      </div>
+      <a href="#" class="ui-btn ui-btn__transparent auth-switch-btn" data-content="login">Register</a>
+    </div>
+  </div>
+  <script>    
+      $(document).ready(function () {  
+        // валидация
+        $(".auth-main-form").on("submit", function (e) {
+          if (!$(".auth-main-form").valid()) e.preventDefault();
+        });
+        $(".auth-main-form").validate({
+          errorElement: "span",
+          errorClass: "invalid",
+  
+          rules: {
+            "email": {
+              required: true,
+              email: true,
+            },           
+          },
+          errorPlacement: function (error, element) {
+            if (element.hasClass("ui-input")) {
+              element.closest(".ui-field").append(error);
+            }
+          },
+        });
+      });
+  </script>
+</div>

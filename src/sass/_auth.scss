@@ -1,0 +1,150 @@
+.auth { 
+    
+    &-wrapper {
+        display: flex;
+        background-color: #fff;
+        border-radius: 10px; 
+        max-height: 90vh;
+        min-height: 56vh;
+        overflow-y: auto;
+
+        .ui-field {
+            position: relative;
+        }        
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }   
+    }
+
+    &-main {
+        width: 50%;
+        flex: 0 0 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media(max-width: 992px) {
+            padding: 35px;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        @media(max-width: 599px) {
+            padding: 30px;
+        }
+
+        @media(max-width: 420px) {
+            padding: 16px;
+        }
+
+        &-title {          
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.33;
+            text-align: center;
+            color: $title;
+            margin-bottom: 24px;
+        }
+
+        &-remember {            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 24px;
+
+            @media(max-width: 599px) {
+                gap: 12px;
+            }
+
+            &-text {
+                font-size: 16px;
+                color: $light-grey;
+            }
+        }
+
+        &-forgot {           
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration-line: underline;
+            color: $primary;
+        }
+    }
+
+    &-switch {
+        color: #FFFFFF;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        flex: 0 0 50%;
+        background-image: url(../images/login-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 40px;
+
+        @media(max-width: 992px) {
+            padding: 35px;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        @media(max-width: 599px) {
+            padding: 30px;
+        }
+
+        @media(max-width: 420px) {
+            padding: 16px;
+        }
+
+        &-title {           
+            font-weight: 600;
+            font-size: 24px;          
+            margin-bottom: 24px;
+        }
+
+        &-text {          
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 24px;                      
+        }
+
+        &-btn {
+            width: min(240px, 100%);            
+        }
+    }    
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    .eye {
+        display: none;
+    }
+
+    &.show .eye {
+        display: block;
+    }
+
+    &.show .eye-off {
+        display: none;
+      }
+}
