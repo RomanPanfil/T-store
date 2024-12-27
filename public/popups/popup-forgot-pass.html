@@ -26,31 +26,51 @@
         <br>
         Sign up and discover a great amount of new opportunities
       </div>
-      <a href="#" class="ui-btn ui-btn__transparent auth-switch-btn" data-content="login">Register</a>
+      <a href="#" class="ui-btn ui-btn__transparent auth-switch-btn auth-switch-modal" data-modal="popup-login">Register</a>
     </div>
   </div>
-  <script>    
-      $(document).ready(function () {  
-        // валидация
-        $(".auth-main-form").on("submit", function (e) {
-          if (!$(".auth-main-form").valid()) e.preventDefault();
-        });
-        $(".auth-main-form").validate({
-          errorElement: "span",
-          errorClass: "invalid",
-  
-          rules: {
-            "email": {
-              required: true,
-              email: true,
-            },           
-          },
-          errorPlacement: function (error, element) {
-            if (element.hasClass("ui-input")) {
-              element.closest(".ui-field").append(error);
-            }
-          },
-        });
+  <script>   
+    (function() {    
+      // валидация
+      $(".auth-main-form").on("submit", function (e) {
+        if (!$(".auth-main-form").valid()) e.preventDefault();
       });
+      $(".auth-main-form").validate({
+        errorElement: "span",
+        errorClass: "invalid",
+
+        rules: {
+          "email": {
+            required: true,
+            email: true,
+          },           
+        },
+        errorPlacement: function (error, element) {
+          if (element.hasClass("ui-input")) {
+            element.closest(".ui-field").append(error);
+          }
+        },
+      });
+
+      $(document).on('click', '.auth-switch-modal', function(e) {
+        e.preventDefault();        
+        const newPopupUrl = $(this).data('modal');              
+        
+        setTimeout(() => {          
+          $.magnificPopup.open({
+            items: {
+              src: `popups/${newPopupUrl}.html`,
+            },
+            type: 'ajax',
+            overflowY: 'scroll',
+            mainClass: 'mfp-fade',
+            removalDelay: 500,
+            ajax: {
+              tError: 'Error. Not valid url',
+            },    
+          });
+        }, 300);
+      });  
+    })();
   </script>
 </div>

@@ -9,7 +9,7 @@
         <br>
         login with your personal info
       </div>
-      <a href="javascript:void(0)" class="ui-btn ui-btn__transparent auth-switch-btn">Login</a>
+      <a href="javascript:void(0)" class="ui-btn ui-btn__transparent auth-switch-modal auth-switch-btn" data-modal="popup-login">Login</a>
     </div>
     <div class="auth-main">
       <div class="auth-main-title">
@@ -90,54 +90,73 @@
       </form>
     </div>
   </div>
-  <script>    
-      $(document).ready(function () {       
-        // показывать/скрывать пароль
-        (function() {
-          document.querySelectorAll('.password-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-              const input = button.previousElementSibling;
-              
-              if (input.type === 'password') {
-                input.type = 'text';
-                button.classList.add('show');
-              } else {
-                input.type = 'password';
-                button.classList.remove('show');
-              }
-            });
-          });
-        })();
-  
-        // валидация
-        $(".auth-main-form").on("submit", function (e) {
-          if (!$(".auth-main-form").valid()) e.preventDefault();
-        });
-        $(".auth-main-form").validate({
-          errorElement: "span",
-          errorClass: "invalid",
-  
-          rules: {
-            "name": {
-              required: true,
-              noDigits: true,              
-            },
-            "email": {
-              
-              email: true,
-            },
-            password: {
-              required: true,
-              minlength: 8,
-              maxlength: 16,
-            },
+  <script>   
+    (function() {
+       // валидация
+       $(".auth-main-form").on("submit", function (e) {
+        if (!$(".auth-main-form").valid()) e.preventDefault();
+      });
+
+      $(".auth-main-form").validate({
+        errorElement: "span",
+        errorClass: "invalid",
+        rules: {
+          "name": {
+            required: true,
+            noDigits: true,
           },
-          errorPlacement: function (error, element) {
-            if (element.hasClass("ui-input")) {
-              element.closest(".ui-field").append(error);
-            }
+          "email": {
+            required: true,
+            email: true,
           },
+          password: {
+            required: true,
+            minlength: 8,
+            maxlength: 16,
+          },
+        },
+        errorPlacement: function (error, element) {
+          if (element.hasClass("ui-input")) {
+            element.closest(".ui-field").append(error);
+          }
+        },
+      });
+
+      // Password toggle
+      document.querySelectorAll('.password-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const input = button.previousElementSibling;
+          if(!input) return;
+          
+          if (input.type === 'password') {
+            input.type = 'text';
+            button.classList.add('show');
+          } else {
+            input.type = 'password';
+            button.classList.remove('show');
+          }
         });
       });
+
+      $(document).on('click', '.auth-switch-modal', function(e) {
+        e.preventDefault();        
+        const newPopupUrl = $(this).data('modal');              
+        
+        setTimeout(() => {          
+          $.magnificPopup.open({
+            items: {
+              src: `popups/${newPopupUrl}.html`,
+            },
+            type: 'ajax',
+            overflowY: 'scroll',
+            mainClass: 'mfp-fade',
+            removalDelay: 500,
+            ajax: {
+              tError: 'Error. Not valid url',
+            },            
+          });
+        }, 300);
+      });      
+    })();
   </script>
 </div>

@@ -78,7 +78,7 @@
               Remember me
             </span>
           </label>
-          <a href="#" class="auth-main-forgot">
+          <a href="#" class="auth-main-forgot auth-switch-modal" data-modal="popup-forgot-pass">
             Forgot password
           </a>
         </div>
@@ -94,38 +94,19 @@
         <br>
         Sign up and discover a great amount of new opportunities
       </div>
-      <a href="#" class="ui-btn ui-btn__transparent auth-switch-btn">Register</a>
+      <a href="#" class="ui-btn ui-btn__transparent auth-switch-modal auth-switch-btn" data-modal="popup-create-account">Register</a>
     </div>
   </div>
-  <script>    
-    $(document).ready(function () {
-      // показывать/скрывать пароль
-      (function() {
-        document.querySelectorAll('.password-toggle').forEach(button => {
-          button.addEventListener('click', () => {
-            const input = button.previousElementSibling;
-
-            if(!input) return
-            
-            if (input.type === 'password') {
-              input.type = 'text';
-              button.classList.add('show');
-            } else {
-              input.type = 'password';
-              button.classList.remove('show');
-            }
-          });
-        });
-      })();
-
+  <script>   
+    (function() {    
       // валидация
       $(".auth-main-form").on("submit", function (e) {
         if (!$(".auth-main-form").valid()) e.preventDefault();
       });
+
       $(".auth-main-form").validate({
         errorElement: "span",
         errorClass: "invalid",
-
         rules: {
           "email": {
             required: true,
@@ -143,6 +124,42 @@
           }
         },
       });
-    });
+
+      // Password toggle
+      document.querySelectorAll('.password-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const input = button.previousElementSibling;
+          if(!input) return;
+          
+          if (input.type === 'password') {
+            input.type = 'text';
+            button.classList.add('show');
+          } else {
+            input.type = 'password';
+            button.classList.remove('show');
+          }
+        });
+      });
+
+      $(document).on('click', '.auth-switch-modal', function(e) {
+        e.preventDefault();        
+        const newPopupUrl = $(this).data('modal');             
+        
+        setTimeout(() => {          
+          $.magnificPopup.open({
+            items: {
+              src: `popups/${newPopupUrl}.html`,
+            },
+            type: 'ajax',
+            overflowY: 'scroll',
+            mainClass: 'mfp-fade',
+            removalDelay: 500,
+            ajax: {
+              tError: 'Error. Not valid url',
+            },  
+          });
+        }, 300);
+      });      
+    })();
   </script>
 </div>
