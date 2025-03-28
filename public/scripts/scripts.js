@@ -613,20 +613,20 @@ document.addEventListener("DOMContentLoaded", () => {
   //     const accordionHeaders = accordion.querySelectorAll('.accordion-header');
 
   //     accordionHeaders.forEach(header => {
-  //       header.addEventListener('click', () => {        
+  //       header.addEventListener('click', () => {
   //         accordionHeaders.forEach(h => {
   //             if (h !== header) {
   //                 h.classList.remove('active');
   //             }
   //         });
-       
+
   //         header.classList.toggle('active');
   //       });
   //     });
   //   });
   // })();
 
- 
+
     // Универсальный аккордеон
   (function() {
     const accordions = document.querySelectorAll('.accordion');
@@ -640,13 +640,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (h !== header) {
               h.classList.remove('active');
             }
-          });         
-      
+          });
+
           header.classList.toggle('active');
 
           // Небольшая задержка для завершения анимации
           setTimeout(() => {
-            const accordionItem = header.closest('.accordion-item');                  
+            const accordionItem = header.closest('.accordion-item');
 
             // Получаем координаты элемента
             const rect = accordionItem.getBoundingClientRect();
@@ -665,15 +665,15 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   // загрузка фото профиля
-  (function() {    
-    function handleAvatarUpload(event) {      
+  (function() {
+    function handleAvatarUpload(event) {
       const fileInput = document.getElementById('avatarInput');
       const avatarPreview = document.getElementById('avatarPreview');
 
       if(!fileInput || !avatarPreview) return;
 
       const file = fileInput.files[0];
-     
+
       if (!file) {
         console.error('Файл не выбран');
         return;
@@ -688,16 +688,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Создаем объект FormData для отправки на бэкенд
       const formData = new FormData();
-      formData.append('avatar', file);      
-      
-      console.log(formData.get('avatar')); // Получить значение по ключу      
+      formData.append('avatar', file);
+
+      console.log(formData.get('avatar')); // Получить значение по ключу
     }
-    
+
     if(!document.getElementById('uploadButton')) return;
     document.getElementById('uploadButton').addEventListener('click', () => {
       document.getElementById('avatarInput').click();
     });
- 
+
     document.getElementById('avatarInput').addEventListener('change', handleAvatarUpload);
   })();
 
@@ -734,4 +734,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     stickyScroll();
   } //if end
+
+  (function () {
+    const shareUrl = document.getElementById('share').value;
+    document.querySelectorAll('[data-sharer]').forEach(link => {
+      link.setAttribute('data-url', shareUrl);
+    });
+  })();
 });

@@ -1,0 +1,108 @@
+.header-topbar {
+  background-color: #F5F6F7;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header-topbar-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-column-gap: 76px;
+  -moz-column-gap: 76px;
+  column-gap: 76px;
+  row-gap: 12px;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.header-topbar-item {
+  max-height: 50px;
+  margin-right: 76px;
+}
+
+.header-topbar-btn {
+  border: 1.5px solid #70B12F;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header-topbar-btn:hover {
+  background-color: #70B12F;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header-topbar-content {
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+
+  .header-topbar-item {
+    max-height: 40px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 599px) {
+  .header-topbar-content {
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+  }
+
+  .header-topbar-item {
+    max-height: 36px;
+    margin-right: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-topbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .header-topbar-content {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .header-topbar-items {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+
+  .header-topbar-item {
+    margin-right: 24px;
+  }
+
+  .header-topbar-btn {
+    width: 100%;
+  }
+}

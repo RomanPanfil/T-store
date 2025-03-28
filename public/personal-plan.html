@@ -37,12 +37,25 @@
       href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css"
     />
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/topbar.css" type="text/css" media="all" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <!-- header start -->
       <header class="header">
+        <div class="header-topbar">
+          <div class="container">
+            <div class="header-topbar-content">
+              <div class="header-topbar-items">
+                <img src="./images/digital-idea.svg" alt="digital-idea" class="header-topbar-item">
+                <img src="./images/tstore-design.svg" alt="t-store-design.svg" class="header-topbar-item">
+                <img src="./images/fly-design.svg" alt="digital-idea" class="fly-design">
+              </div>
+              <a href="#" class="ui-btn ui-btn__invert header-topbar-btn"> About</a>
+            </div>
+          </div>
+        </div>
         <div class="header-top">
           <div class="container">
             <div class="header-top-wrapper">
@@ -506,23 +519,23 @@
                           </div>
                           <div class="col-6 self-center plan-share-socials">
                             <div class="ui-socials">
-                              <a href="#">
+                              <a href="#" data-sharer="pinterest">
                                 <img
-                                  src="./images/svg/YouTube.svg"
-                                  alt="youtube"
+                                  src="./images/svg/pinterest.svg"
+                                  alt="pinterest"
                                   class="ui-socials-icon"
                                 />
                               </a>
-                              <a href="#">
+                              <a href="#" data-sharer="facebook">
                                 <img
                                   src="./images/svg/fb.svg"
                                   alt="facebook"
                                   class="ui-socials-icon"
                                 />
                               </a>
-                              <a href="#">
+                              <a href="#" data-sharer="x">
                                 <img
-                                  src="./images/svg/inst.svg"
+                                  src="./images/svg/icon-x.svg"
                                   alt="instagram"
                                   class="ui-socials-icon"
                                 />
@@ -1153,6 +1166,7 @@
     ></script> -->
     <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.2.0/dist/jquery.magnific-popup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>
