@@ -737,8 +737,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   (function () {
     const shareUrl = document.getElementById('share').value;
+
     document.querySelectorAll('[data-sharer]').forEach(link => {
       link.setAttribute('data-url', shareUrl);
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+      });
     });
+
   })();
 });
